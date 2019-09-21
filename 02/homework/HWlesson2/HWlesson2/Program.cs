@@ -9,12 +9,12 @@ namespace HWlesson2
 
 
              Console.WriteLine("Здравствуйте ,введите первое целое число"); 
-             var N1 = int.Parse(Console.ReadLine());
+             var firstOperand = int.Parse(Console.ReadLine());
              Console.WriteLine("введите второе целое число");
-             var N2 = int.Parse(Console.ReadLine());
-             Console.WriteLine($"Сумма данных чисел = {N1 + N2}");
-             Console.WriteLine($"А разница чисел = {N1 - N2}");
-             Console.WriteLine($"И наконец произведение чисел  = {N1 * N2}");
+             var secondOperand = int.Parse(Console.ReadLine());
+             Console.WriteLine($"Сумма данных чисел = {firstOperand + secondOperand}");
+             Console.WriteLine($"А разница чисел = {firstOperand - secondOperand}");
+             Console.WriteLine($"И наконец произведение чисел  = {firstOperand * secondOperand}");
              Console.WriteLine("для завершения нажмите любую клавишу");
              Console.ReadKey();
 
