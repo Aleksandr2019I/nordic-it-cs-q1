@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace HWlesson3
+namespace ДЗ._2
 {
-
-        class Program
-        {
+    class Program
+    {
         static void Main(string[] args)
         {
             Console.WriteLine("Введите число");
@@ -23,7 +22,7 @@ namespace HWlesson3
                 Console.WriteLine($"деление = {N1 / N2}");
             else if (select == "%")
                 Console.WriteLine($"по модулю = {N1 % N2}");
-            else if (select == "^")
+            else if (select == "^")              
             {
                 if (N1 == 0 & N2 == 0) //проверка освнования и степени на 0
                 {
@@ -33,26 +32,25 @@ namespace HWlesson3
                 {
                     Console.WriteLine("число в нулевой степени равно Единице");
                 }
-                else if (N1 >= 0 & N2 > 0)
-                {
+                else if (N1 >= 0 & N2 > 0)                  
+                {                  
                     var power = Math.Pow(N1, N2); // через math.pow
                     Console.WriteLine($"основание '{N1}' в степени '{N2}' = {power}");
                     // через for
                     Console.WriteLine("и еще 1 способ возведения в степень");
-                    int c = 1;
-                    for (int i = 0; i < N2; i++)
-                    {
-                        c = c * N1;
+                    int c = 1; 
+                    for (int i = 0; i < N2; i++)                        
+                    {                    
+                        c = c * N1;                                             
                     }
                     Console.WriteLine($"{N1}^{N2} = {c}");
-                }
+                }                             
             }
             else
 
                 Console.WriteLine("я незнаю такой операции");
-            Console.WriteLine("для завершения нажмите любую клавишу");
-            Console.ReadKey();
+                Console.WriteLine("для завершения нажмите любую клавишу");
+                Console.ReadKey();
         }
     }
-
 }
