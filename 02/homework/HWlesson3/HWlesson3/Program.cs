@@ -7,11 +7,11 @@ namespace HWlesson3
         {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число");
+            Console.WriteLine("Введите целое число");
             var N1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите второе число");
+            Console.WriteLine("Введите второе целое число");
             var N2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("какую операцию вы хотите выполнить +, -, *, /, %, ^");
+            Console.WriteLine("какую операцию вы хотите выполнить: если сложение то введи знак '+',если вычетание то знак '-',умножение знак '*',деление знак '/', остаток по модул знак '%',возвести в степень знак '^'");
             string select = Console.ReadLine(); // выбор операции
             if (select == "+")
                 Console.WriteLine($"сумма = {N1 + N2}");
