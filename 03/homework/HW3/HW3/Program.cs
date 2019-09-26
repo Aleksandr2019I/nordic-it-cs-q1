@@ -22,10 +22,10 @@ namespace HW3
             }
 
             Console.WriteLine("enter their age"); // введите их возраст
-            List<string> ages = new List<string>();
+            List<double> ages = new List<double>();
             for (int i = 0; i < 3; i++)
             {
-                string age = Convert.ToString(Console.ReadLine());
+                double age = Convert.ToDouble(Console.ReadLine());
                 ages.Add(age);
 
             }
