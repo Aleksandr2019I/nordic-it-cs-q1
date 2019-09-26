@@ -17,8 +17,8 @@ namespace HW3
             for (int i = 0; i < 3; i++)
             {
                 string name = Convert.ToString(Console.ReadLine());
-                names.Add(name);            
-                
+                names.Add(name);
+
             }
 
             Console.WriteLine("enter their age"); // введите их возраст
@@ -32,14 +32,22 @@ namespace HW3
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"Name:{names[i]}, age in 4 years :{ages[i]}");
-            }
-
-           
+                WriteWithColor("Name: ", ConsoleColor.Gray);
+                WriteWithColor($"{names[i]}", ConsoleColor.DarkYellow);
+                WriteWithColor(", age in 4 years:", ConsoleColor.Gray);
+                WriteWithColor($"{ages[i]}", ConsoleColor.DarkYellow);
+                Console.WriteLine();
+            }         
             Console.ReadKey();
-
-
         }
 
+
+        static void WriteWithColor(string text, ConsoleColor color)
+        {
+            var restoreColor = Console.ForegroundColor;
+            Console.ForegroundColor = color;
+            Console.Write(text);
+            Console.ForegroundColor = restoreColor;
+        }
     }
 }
