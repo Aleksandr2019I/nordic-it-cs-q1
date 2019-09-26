@@ -2,6 +2,13 @@
 
 namespace ConsoleApp1
 {
+	enum Season : int
+	{
+		zima = 3,
+		leto = 9,
+		ocenb = 12,
+		vesna = 6
+	}
 	class Program
 	{
 		static void Main(string[] args)
@@ -23,10 +30,17 @@ namespace ConsoleApp1
 			Console.ReadKey();
 
 
+			Console.WriteLine("{0},{1}", Season.vesna, (int)Season.vesna);
+			Console.WriteLine("{0},{1}", Season.ocenb, (int)Season.ocenb);
 
+
+			Console.ReadKey();
 
 
 
 		}
-	}
+
+		
+
+
 }
