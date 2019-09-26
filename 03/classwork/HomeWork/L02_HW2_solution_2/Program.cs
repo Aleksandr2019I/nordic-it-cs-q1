@@ -27,6 +27,7 @@ namespace L02_HW2_solution_2
 			var result = Calculate(firstOperand, secondOperand, @operator);
 
 			WriteResult(firstOperand, secondOperand, @operator, result);
+
             Console.ReadKey();
 
 		}
@@ -168,6 +169,7 @@ namespace L02_HW2_solution_2
 			Console.Write(text);
 			Console.ForegroundColor = restoreColor;
 		}
+
         
 	}
 }

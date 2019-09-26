@@ -16,16 +16,17 @@ namespace HW3
             List<string> names = new List<string>();
             for (int i = 0; i < 3; i++)
             {
-                string name = Convert.ToString(Console.ReadLine());
+                string name = Console.ReadLine();
                 names.Add(name);
 
             }
 
             Console.WriteLine("enter their age"); // введите их возраст
-            List<double> ages = new List<double>();
+            List<int> ages = new List<int>();
             for (int i = 0; i < 3; i++)
             {
-                double age = Convert.ToDouble(Console.ReadLine());
+                int age;
+                bool ageResult = int.TryParse(Console.ReadLine(), out age );
                 ages.Add(age);
 
             }
@@ -41,6 +42,7 @@ namespace HW3
             Console.ReadKey();
         }
 
+        
 
         static void WriteWithColor(string text, ConsoleColor color)
         {
@@ -49,5 +51,6 @@ namespace HW3
             Console.Write(text);
             Console.ForegroundColor = restoreColor;
         }
+
     }
 }
