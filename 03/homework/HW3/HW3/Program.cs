@@ -25,9 +25,18 @@ namespace HW3
             List<int> ages = new List<int>();
             for (int i = 0; i < 3; i++)
             {
-                int age;
-                bool ageResult = int.TryParse(Console.ReadLine(), out age );
-                ages.Add(age);
+                
+                while (true)
+                {
+                    
+                    var ageResult = int.TryParse(Console.ReadLine(), out var age);
+                    ages.Add(age);
+                    if (ageResult)
+                    {
+                        break;
+                    }
+                    Console.WriteLine("Wrong Value!");
+                }
 
             }
 
