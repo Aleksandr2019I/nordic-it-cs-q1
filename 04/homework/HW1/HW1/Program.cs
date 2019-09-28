@@ -46,6 +46,7 @@
 
 namespace HW1
 {
+    [Flags]
     enum Colors
     {
         // сдиваг делаем для того чтобы небыло пересечений 
@@ -71,15 +72,13 @@ namespace HW1
 
             foreach (string s in Enum.GetNames(color))
                 Console.WriteLine("{0,-11}= {1}", s, Enum.Format(color, Enum.Parse(color, s), "d"));
-            var favorites = Console.ReadLine();
+            var favorites = (int.Parse(Console.ReadLine());
+           
 
-            switch (favorites.ToString())
-            {
-                case Colors.Blue:
-                    Console.WriteLine("Вы выбрали синий цвет");
-                    break;
-            }
             
+
+        
+
 
             Console.ReadKey();
         }

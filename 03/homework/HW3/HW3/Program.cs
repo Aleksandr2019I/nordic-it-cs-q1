@@ -13,16 +13,16 @@ namespace HW3
         {
 
             Console.WriteLine("enter the names of three people"); // введите имена трех человек          
-            List<string> names = new List<string>();
+            string[] names = new string [3];
             for (int i = 0; i < 3; i++)
             {
                 string name = Console.ReadLine();
-                names.Add(name);
+                names[i]=name;
 
             }
 
             Console.WriteLine("enter their age"); // введите их возраст
-            List<int> ages = new List<int>();
+            int[] ages = new int[3];
             for (int i = 0; i < 3; i++)
             {
                 
@@ -30,7 +30,7 @@ namespace HW3
                 {
                     
                     var ageResult = int.TryParse(Console.ReadLine(), out var age);
-                    ages.Add(age);
+                    ages[i]=age;
                     if (ageResult)
                     {
                         break;
