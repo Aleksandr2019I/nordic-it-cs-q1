@@ -46,75 +46,52 @@
 
 namespace HW1
 {
-    [Flags]
-    enum Colors 
+    enum Colors
     {
-        
-        Blue = 0 ,
-        Grey = 1,
-        Green  = 2,
-        Magenta = 3,
-        Red = 4,
-        White = 5,
-        Yellow = 6,
-        Black = 7,
-        Cyan = 10,
+        // сдиваг делаем для того чтобы небыло пересечений 
+        Blue = 0x1,
+        Grey = 0x1 << 1,
+        Green = 0x1 << 2,
+        Magenta = 0x1 << 3,
+        Red = 0x1 << 4,
+        White = 0x1 << 5,
+        Yellow = 0x1 << 6,
+        Black = 0x1 << 7,
+        Cyan = 0x1 << 8,
     }
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            
-             Console.WriteLine($"выбирите цвета и введите равное им значение {Colors.Black} = {(int)Colors.Black},{Colors.Blue} = {(int)Colors.Blue}," +
-                 $"{Colors.Grey} = {(int)Colors.Grey},{Colors.Green} = {(int)Colors.Green}," +
-                 $"{Colors.Magenta} = {(int)Colors.Magenta},{Colors.Red} = {(int)Colors.Red},{Colors.White} = {(int)Colors.White}," +
-                 $"{Colors.Yellow} = {(int)Colors.Yellow},{Colors.Cyan} = {(int)Colors.Cyan},");
-           
+
+            var color = typeof(Colors);
+            Console.WriteLine("цвета и их соответствующие значения: ");
+
+            foreach (string s in Enum.GetNames(color))
+                Console.WriteLine("{0,-11}= {1}", s, Enum.Format(color, Enum.Parse(color, s), "d"));
+            var favorites = Console.ReadLine();
+
+            switch (favorites.ToString())
+            {
+                case Colors.Blue:
+                    Console.WriteLine("Вы выбрали синий цвет");
+                    break;
+            }
             
 
-            for (int i = 0; i < 4; i++)
-            {               
-                var operation = int.Parse(Console.ReadLine());
-            if (operation == 0)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Blue}") ;
-            }
-            if (operation == 1)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Grey}");
-            }
-            if (operation == 2)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Green}");
-            }
-            if (operation == 3)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Magenta}");
-            }
-            if (operation == 4)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Red}");
-            }
-            if (operation == 5)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.White}");
-            }
-            if (operation == 6)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Yellow}");
-            }
-            if (operation == 7)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Black}");
-            }
-            if (operation == 10)
-            {
-                Console.WriteLine($"Вы выбрали {Colors.Cyan}");
-            }
-            }
             Console.ReadKey();
-
         }
+
+        /*
+        Enum.GetValues(typeof(Colors));
+        foreach (var s in Enum.GetValues(typeof(Colors)))
+            Console.WriteLine("{0,-11}= {1}", s, Enum.Format(Colors, Enum.Parse(Colors, s), "d"));
+        Console.WriteLine($"C");
+         */
+        
+       
     }
-}
+    }
+
