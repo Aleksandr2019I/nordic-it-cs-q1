@@ -28,11 +28,10 @@ namespace HW3
                 
                 while (true)
                 {
-                    
-                    var ageResult = int.TryParse(Console.ReadLine(), out var age);
-                    ages[i]=age;
-                    if (ageResult)
-                    {
+                                       
+                    if (int.TryParse(Console.ReadLine(), out var age))
+                    {                       
+                        ages[i] = age;
                         break;
                     }
                     Console.WriteLine("Wrong Value!");
