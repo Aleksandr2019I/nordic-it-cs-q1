@@ -64,12 +64,7 @@ namespace HW1
         {
             
             var values = Enum.GetValues(typeof(Colors));
-            foreach (var value in values)
-            {
-                //Do operations here
-            }
-            Console.WriteLine($"{values}");
-            Console.ReadKey();
+           
             
 
             Type color = typeof(Colors);
