@@ -21,23 +21,7 @@ namespace HW3
 
             }
 
-            Console.WriteLine("enter their age"); // введите их возраст
-            int[] ages = new int[3];
-            for (int i = 0; i < 3; i++)
-            {
-                
-                while (true)
-                {
-                                       
-                    if (int.TryParse(Console.ReadLine(), out var age))
-                    {                       
-                        ages[i] = age;
-                        break;
-                    }
-                    Console.WriteLine("Wrong Value!");
-                }
-
-            }
+            `
 
             for (int i = 0; i < 3; i++)
             {

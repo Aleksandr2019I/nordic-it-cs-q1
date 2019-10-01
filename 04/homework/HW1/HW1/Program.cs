@@ -24,32 +24,29 @@
 ● White
 ● Yellow
 
-        enum Colors  
-    {
-       // сдиваг делаем для того чтобы небыло пересечений 
-        Blue = 0x1,          
-        Grey = 0x1 << 1,          
-        Green = 0x1 << 2,         
-        Magenta = 0x1 << 3,      
-        Red = 0x1 << 4,          
-        White = 0x1 << 5,         
-        Yellow = 0x1 << 6,      
-        Black = 0x1 << 7,
-        Cyan = 0x1 << 8,
-    }
                 int num = (int)Colors.Black;
             var color = Colors.Black | Colors.Blue | Colors.Cyan | Colors.Green | Colors.Grey | Colors.Magenta | Colors.Red | Colors.White | Colors.Yellow;
             Console.WriteLine($"цвета {color}");
             Console.WriteLine($"{num}");
             Console.ReadKey();
+
+     var color = typeof(Colors);
+            Console.WriteLine("цвета и их соответствующие значения: ");
+
+             foreach (string s in Enum.GetNames(color))
+            Console.WriteLine("{0,-11}= {1}", s, Enum.Format(color, Enum.Parse(color, s), "d"));                
+            Console.ReadKey();
+
+
      */
 
 namespace HW1
 {
+
     [Flags]
     enum Colors
     {
-        // сдиваг делаем для того чтобы небыло пересечений 
+        // сдвиг делаем для того чтобы небыло пересечений 
         Blue = 0x1,
         Grey = 0x1 << 1,
         Green = 0x1 << 2,
@@ -60,37 +57,75 @@ namespace HW1
         Black = 0x1 << 7,
         Cyan = 0x1 << 8,
     }
-
-
     class Program
     {
-        static void Main(string[] args)
+
+        static void Main()
         {
-
-            var color = typeof(Colors);
-            Console.WriteLine("цвета и их соответствующие значения: ");
-
-            foreach (string s in Enum.GetNames(color))
-                Console.WriteLine("{0,-11}= {1}", s, Enum.Format(color, Enum.Parse(color, s), "d"));
-            var favorites = (int.Parse(Console.ReadLine());
-           
-
+            
+            var values = Enum.GetValues(typeof(Colors));
+            foreach (var value in values)
+            {
+                //Do operations here
+            }
+            Console.WriteLine($"{values}");
+            Console.ReadKey();
             
 
-        
+            Type color = typeof(Colors);
+            foreach (string s in Enum.GetNames(color))
+                Console.WriteLine("{0, -11}= {1}", s, Enum.Format(color, Enum.Parse(color, s), "d"));
 
+            Console.WriteLine("введите цвет числом"); // ввести номер цвета
+            int[] favorites = new int[4];
+            for (int i = 0; i < 4; i++)
+            {
+
+                while (true)
+                {
+
+                    if (int.TryParse(Console.ReadLine(), out var num))
+                    {
+                        favorites[i] = num;
+                        break;
+                    }
+                    Console.WriteLine("Wrong Value!");
+                }
+
+            }
+
+            Console.WriteLine($"{favorites}");
+
+          /*
+            
+
+
+            Console.WriteLine("The values of the Colors Enum are:");
+            foreach (int i in Enum.GetValues(typeof(Colors)))
+                Console.WriteLine(i);
+
+
+
+            Console.WriteLine();
+            */
 
             Console.ReadKey();
+
         }
 
-        /*
-        Enum.GetValues(typeof(Colors));
-        foreach (var s in Enum.GetValues(typeof(Colors)))
-            Console.WriteLine("{0,-11}= {1}", s, Enum.Format(Colors, Enum.Parse(Colors, s), "d"));
-        Console.WriteLine($"C");
-         */
-        
-       
+
+
+
+
     }
-    }
+
+}
+
+
+
+
+
+
+
+
 
