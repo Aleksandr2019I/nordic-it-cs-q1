@@ -33,24 +33,14 @@ namespace HW2
         static void Main()
         {
             var num = ReadDouble();
-
-           // int top1 = (((int)num / (int)Container.liter20) / (int)Container.liter5) / (int)Container.liter1;          
-            var top = (((num % 20) % 5) % 1);
-            if (num > 0)
-            {
-               int result = (int)num / (int)Container.liter20;
-                    Console.Write($"{result} +");
-            }
-            
-            
-            Console.WriteLine($"{top}");
+            var value = Math.DivRem((int)num, 20, out var balance);
+            var value1 = Math.DivRem(balance, 5, out var balance1);
+            var value2 = Math.DivRem(balance1, 1, out var balance2);
+            Console.WriteLine($"20 л: {value} шт");
+            Console.WriteLine($"5 л: {value1} шт");
+            Console.WriteLine($"1 л: {value2} шт");
 
 
-
-
-
-
-            Console.WriteLine($"");
             Console.ReadKey();
         }
         static double ReadDouble()
@@ -70,8 +60,9 @@ namespace HW2
             
         }
 
-       
-        
+
+
+
     }
 }
  
