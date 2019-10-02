@@ -33,12 +33,31 @@ namespace HW2
         static void Main()
         {
             var num = ReadDouble();
-            var value = Math.DivRem((int)num, 20, out var balance);
-            var value1 = Math.DivRem(balance, 5, out var balance1);
-            var value2 = Math.DivRem(balance1, 1, out var balance2);
-            Console.WriteLine($"20 л: {value} шт");
-            Console.WriteLine($"5 л: {value1} шт");
-            Console.WriteLine($"1 л: {value2} шт");
+            if (num >= 0)
+            {
+                var value = Math.DivRem((int)num, 20, out var balance);
+                Console.WriteLine($"20 л: {value} шт");
+                if (value >= 0)
+                {
+                    var value1 = Math.DivRem(balance, 5, out var balance1);
+                    Console.WriteLine($"5 л: {value1} шт");
+
+                    if (value1 >= 0)
+                    {
+                        var value2 = Math.DivRem(balance1, 1, out var balance2);
+                        Console.WriteLine($"1 л: {value2} шт");
+                    }
+                    
+                }
+
+               
+                
+                
+            }
+            
+            
+            
+        
 
 
             Console.ReadKey();
