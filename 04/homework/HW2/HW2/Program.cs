@@ -23,35 +23,36 @@ namespace HW2
         enum Container : byte
         {
             none = 0x0,
-            liter1 = 0x1 << 1,
-            liter5 = 0x1 << 2,
-            liter20 = 0x1 << 3,
+            liter1 = 0001 ,
+            liter5 = 0010,
+            liter20 = 0100,
 
         };
 
 
         static void Main()
         {
+
+            
             while (true)
-            {
-                Console.Write("Какой объем сока (в литрах) требуется упаковать? ");
-                
+            {              
+                Console.Write("Какой объем сока (в литрах) требуется упаковать? ");                
                 if (double.TryParse(Console.ReadLine(), out double input)) //проверка на число
                 {
                     Console.WriteLine($"Выше число {input}");
                     break;
                 }
-                Console.WriteLine("Wrong value");
+                Console.WriteLine("Wrong value");                
             }
-
-
             Console.WriteLine($"Вам потребуются следующие контейнеры:");
 
+            var num = typeof(Container);
 
+            Console.WriteLine($"{num}");
             Console.ReadKey();
         }
+       
         
-    
     }
 }
  

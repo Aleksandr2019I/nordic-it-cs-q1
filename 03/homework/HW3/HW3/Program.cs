@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,31 @@ namespace HW3
         {
 
             Console.WriteLine("enter the names of three people"); // введите имена трех человек          
-            string[] names = new string [3];
+            string[] names = new string[3];
             for (int i = 0; i < 3; i++)
             {
                 string name = Console.ReadLine();
-                names[i]=name;
+                names[i] = name;
 
             }
 
-            `
+            Console.WriteLine("enter their age"); // введите их возраст
+            int[] ages = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+
+                while (true)
+                {
+
+                    if (int.TryParse(Console.ReadLine(), out var age))
+                    {
+                        ages[i] = age;
+                        break;
+                    }
+                    Console.WriteLine("Wrong Value!");
+                }
+
+            }
 
             for (int i = 0; i < 3; i++)
             {
@@ -30,11 +47,11 @@ namespace HW3
                 WriteWithColor(", age in 4 years:", ConsoleColor.Gray);
                 WriteWithColor($"{ages[i]}", ConsoleColor.DarkYellow);
                 Console.WriteLine();
-            }         
+            }
             Console.ReadKey();
         }
 
-        
+
 
         static void WriteWithColor(string text, ConsoleColor color)
         {
