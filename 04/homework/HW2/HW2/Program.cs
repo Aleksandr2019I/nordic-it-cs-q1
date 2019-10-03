@@ -40,36 +40,38 @@ namespace HW2
 
         static void Main()
         {
-            var number = ReadDouble();
+            var numberOfLiters = ReadDouble();
 
             ContainerSign valueContainer = ContainerSign.none;
 
-                       var countContainer20 = number / (int)ContainerVolume.volume20;
+                       var countContainer20 = numberOfLiters / (int)ContainerVolume.volume20;
+                       
                        if (countContainer20 > 0)
                         {
-                           countContainer20 %= (int)ContainerVolume.volume20;
+                            numberOfLiters %= (int)ContainerVolume.volume20;
                            valueContainer |= ContainerSign.liter20;
 
                         }
             
-            
+   
             var countContainer5 = countContainer20 / (int)ContainerVolume.volume5;
                         if (countContainer5 > 0)
                         {
-                            countContainer20 %= (int)ContainerVolume.volume5;
+                countContainer20 %= (int)ContainerVolume.volume5;
                             valueContainer |= ContainerSign.liter5;
 
                         }
                        var countContainer1 = countContainer5 / (int)ContainerVolume.volume1;
                         if (countContainer1 > 0)
                         {
-                            countContainer5 %= (int)ContainerVolume.volume1;
+                         countContainer5 %= (int)ContainerVolume.volume1;
                             valueContainer |= ContainerSign.liter1;
 
                         }
-            Console.WriteLine($"20 л: {countContainer20} шт");
-            Console.WriteLine($"20 л: {countContainer5} шт");
-            Console.WriteLine($"20 л: {countContainer1} шт");
+
+            Console.WriteLine($"20 л: {countContainer20}шт");
+            Console.WriteLine($"5 л: {countContainer5} шт");
+          Console.WriteLine($"1 л: {countContainer1} шт");
 
             // в битах которой будет лежать признак наличия контейнера того или иного этого типа(0001 - 1л, 0010 - 5л, 0100 - 20л).
             // При выводе,
