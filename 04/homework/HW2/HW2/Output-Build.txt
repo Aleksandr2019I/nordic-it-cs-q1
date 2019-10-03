@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: HW2, Configuration: Debug Any CPU ------
+1>HW2 -> C:\Users\mosco\Desktop\smirnov\nordic-it-cs-q1\04\homework\HW2\HW2\bin\Debug\netcoreapp2.2\HW2.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
