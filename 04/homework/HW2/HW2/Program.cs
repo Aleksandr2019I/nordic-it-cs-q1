@@ -54,7 +54,6 @@ namespace HW2
 
 			}
 
-
 			var countContainer5 = Math.Floor (numberOfLiters / (int)ContainerVolume.volume5);
 			if (countContainer5 > 0)
 			{
