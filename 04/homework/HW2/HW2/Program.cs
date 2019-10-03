@@ -62,7 +62,7 @@ namespace HW2
 				valueContainer |= ContainerSign.liter5;
 
 			}
-			var countContainer1 = numberOfLiters / (int)ContainerVolume.volume1;
+			var countContainer1 = Math.Ceiling (numberOfLiters / (int)ContainerVolume.volume1);
 			if (countContainer1 > 0)
 			{
 				numberOfLiters %= (int)ContainerVolume.volume1;
