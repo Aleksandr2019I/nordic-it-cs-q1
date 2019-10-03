@@ -48,8 +48,8 @@ namespace HW2
                        
                        if (countContainer20 > 0)
                         {
-                            numberOfLiters %= (int)ContainerVolume.volume20;
-                           valueContainer |= ContainerSign.liter20;
+                            numberOfLiters %= (int)ContainerVolume.volume20; //numberOfLiters ненужное присваивание значения
+                            valueContainer |= ContainerSign.liter20;
 
                         }
             
@@ -65,9 +65,9 @@ namespace HW2
                         if (countContainer1 > 0)
                         {
                          countContainer5 %= (int)ContainerVolume.volume1;
-                            valueContainer |= ContainerSign.liter1;
+                            valueContainer |= ContainerSign.liter1; //valueContainer ненужное присваивание значения
 
-                        }
+            }
 
             Console.WriteLine($"20 л: {countContainer20}шт");
             Console.WriteLine($"5 л: {countContainer5} шт");
@@ -77,27 +77,23 @@ namespace HW2
             // При выводе,
 
             //если бит, отвечающий за наличие хотя бы одного контейнера данного типа, равен 0,
-            /*
-                                    if ((valueContainer | Container.liter1)  == 1)
+         
+                                    if ((valueContainer | ContainerSign.liter1) != 0)
                                     {
-                                        Console.WriteLine($"1 Л: {z} шт");
+                                        Console.WriteLine($"1 Л: { ContainerSign.liter1} шт");
                                     }
-                                    if ((valueContainer | Container.liter5)== 1)
+                                    if ((valueContainer | ContainerSign.liter5) != 0)
                                     {
-                                        Console.WriteLine($"5 Л: {y} шт");
+                                        Console.WriteLine($"5 Л: { ContainerSign.liter5} шт");
                                     }
-                                    if ((valueContainer | Container.liter20) == 1)
+                                    if ((valueContainer | ContainerSign.liter20) != 0)
                                     {
-                                        Console.WriteLine($"20 Л: {x} шт");
+                                        Console.WriteLine($"20 Л: { ContainerSign.liter20} шт");
                                     }
                                     //строку с данными по этому контейнеру не выводить.
 
-             
-            Console.WriteLine($"20 л: {countContainer20} шт");
-            Console.WriteLine($"5 Л: {countContainer5} шт");        
-           Console.WriteLine($"1 Л: {countContainer1} шт");
-            */
 
+          
 
             Console.ReadKey();
         }
