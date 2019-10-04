@@ -2,21 +2,6 @@
 
 namespace HW2
 {
-
-	/*
-     Написать консольное приложение, которое будет спрашивать, “Какой объем
-сока (в литрах) требуется упаковать?”.
-Затем оно будет рассчитывать и выдавать в качестве ответа необходимое
-количество контейнеров каждого типа.
-В нашей модели будет 3 типа контейнеров: 1 литр, 5 литров, 20 литров.
-Типы контейнеров должны быть определены в перечислении
-(представленным битовыми флагами).
-Кроме количества контейнеров необходимо посчитать значение
-переменной типа Int32, в битах которой будет лежать признак наличия
-контейнера того или иного этого типа (0001 - 1л, 0010 - 5л, 0100 - 20л) .
-При выводе, если бит, отвечающий за наличие хотя бы одного контейнера
-данного типа, равен 0, строку с данными по этому контейнеру не выводить.
-         */
 	class Program
 	{
 		[Flags]
@@ -49,8 +34,8 @@ namespace HW2
 
 			if (countContainer20 > 0)
 			{
-				numberOfLiters %= (int)ContainerVolume.volume20; //numberOfLiters ненужное присваивание значения
-				valueContainer |= ContainerSign.liter20;
+				numberOfLiters %= (int)ContainerVolume.volume20; 
+				valueContainer |= ContainerSign.liter20; // 0000 | 0100 == 0100
 
 			}
 
@@ -64,8 +49,7 @@ namespace HW2
 			var countContainer1 = Math.Ceiling (numberOfLiters / (int)ContainerVolume.volume1);
 			if (countContainer1 > 0)
 			{
-				numberOfLiters %= (int)ContainerVolume.volume1;
-				valueContainer |= ContainerSign.liter1; //valueContainer ненужное присваивание значения
+				valueContainer |= ContainerSign.liter1; 
 
 			}
 
@@ -86,15 +70,15 @@ namespace HW2
 			// 0111
 
 			// 0001
-			if ((valueContainer & ContainerSign.liter1) == ContainerSign.liter1) //
+			if ((valueContainer & ContainerSign.liter1) == ContainerSign.liter1) 
 			{
 				Console.WriteLine($"1 л: {countContainer1} шт");
 			}
-			if ((valueContainer & ContainerSign.liter5) == ContainerSign.liter5)
+			if ((valueContainer & ContainerSign.liter5) == ContainerSign.liter5) 
 			{
 				Console.WriteLine($"5 л: {countContainer5} шт");
 			}
-			if ((valueContainer & ContainerSign.liter20) == ContainerSign.liter20)
+			if ((valueContainer & ContainerSign.liter20) == ContainerSign.liter20) // 0100 & 0100 == 0100
 			{
 				Console.WriteLine($"20 л: {countContainer20}шт");
 			}
