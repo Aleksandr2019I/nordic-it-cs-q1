@@ -24,23 +24,25 @@ namespace HW5
     [Flags]
     enum Figures
     { 
-        none = 0,
-        circle = 1,     // круг
-        equilateralTriangle = 2, // равносторонний треугольник
-        rectangle = 3 // прямоугольник
+        None = 0,
+        Circle = 1,     // круг
+        EquilateralTriangle = 2, // равносторонний треугольник equilateralTriangle
+        Rectangle = 3 // прямоугольник rectangle
     }
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine($"Выбрите тип фигуры ({(int)Figures.circle} - {Figures.circle}," + 
-                $"{(int)Figures.equilateralTriangle} - {Figures.equilateralTriangle}," +
-                $"{(int)Figures.rectangle} - {Figures.rectangle})");
+            Console.WriteLine($"Выбрите тип фигуры ({(int)Figures.Circle} - {Figures.Circle}," + 
+                $"{(int)Figures.EquilateralTriangle} - {Figures.EquilateralTriangle}," +
+                $"{(int)Figures.Rectangle} - {Figures.Rectangle})");
 
             int input = int.Parse(Console.ReadLine());
+
+
             switch (input)
             {
-                case (int)Figures.circle:
+                case (int)Figures.Circle:
                     Console.WriteLine("Вы выбрали круг, введите его диаметр");
                     double diameter = double.Parse(Console.ReadLine());
                     Console.WriteLine($"{diameter}");
@@ -50,7 +52,7 @@ namespace HW5
                     Console.WriteLine($"Площадь поверхности: {areaCircle} ");
                     Console.WriteLine($"Длина периметра: {circleLength} ");
                     break;
-                case (int)Figures.equilateralTriangle:
+                case (int)Figures.EquilateralTriangle:
                     Console.WriteLine("Вы выбрали треугольник, введите длину строны");
                     double sideLength = double.Parse(Console.ReadLine());
                     Console.WriteLine($"{sideLength}");
@@ -59,7 +61,7 @@ namespace HW5
                     Console.WriteLine($"Площадь поверхности: {areaTriangle} ");
                     Console.WriteLine($"Длина периметра: {triangleLength} ");                   
                     break;
-                case (int)Figures.rectangle:
+                case (int)Figures.Rectangle:
                     Console.WriteLine("Вы выбрали прямоугольник, введите высоту");
                     double heightRectanle = double.Parse(Console.ReadLine()); // высота прямоугольник
                     Console.WriteLine($" высота {heightRectanle}"); 

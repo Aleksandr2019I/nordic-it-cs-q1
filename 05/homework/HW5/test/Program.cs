@@ -5,24 +5,34 @@ namespace test
     [Flags]
     enum Figures
     {
-        none = 0,
-        circle = 1,
-        equilateral = 2,
-        rectangle = 3
+        None = 0,
+        Circle = 1,     // круг
+        EquilateralTriangle = 2, // равносторонний треугольник equilateralTriangle
+        Rectangle = 3 // прямоугольник rectangle
     }
     class Program
     {
         static void Main()
-        {   
-            var a = 6;
-            var x = (Math.Sqrt(9)/4) * Math.Pow(a,2);
-            Console.WriteLine(x);
-            var y = Math.Pow(a, 2);
-            Console.WriteLine(y);
-
-
-
+        {
+            var fig = GetColors();
+            Console.WriteLine($"{fig}");
             Console.ReadKey();
+           
         }
+        static Figures GetColors()
+        {
+            var result = Figures.None;
+            var values = (Figures[])Enum.GetValues(typeof(Figures));
+
+            for (var i = 0; i < values.Length; i++)
+            {
+                result = result | values[i];
+            }
+
+            return result;
+        }
+
+
+
     }
 }
