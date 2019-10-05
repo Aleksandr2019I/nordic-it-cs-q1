@@ -7,19 +7,19 @@ namespace HW2
 		[Flags]
 		enum ContainerSign
 		{
-			none = 0x0,
-			liter1 = 0x1 << 1,
-			liter5 = 0x1 << 2,
-			liter20 = 0x1 << 3,
+			None = 0x0,
+			Liter1 = 0x1 << 1,
+			Liter5 = 0x1 << 2,
+			Liter20 = 0x1 << 3,
 
 		};
 
 		enum ContainerVolume
 		{
 
-			volume1 = 1,
-			volume5 = 5,
-			volume20 = 20,
+			Volume1 = 1,
+			Volume5 = 5,
+			Volume20 = 20,
 		};
 
 
@@ -28,28 +28,28 @@ namespace HW2
 			
 			var numberOfLiters = ReadDouble();
 
-			ContainerSign valueContainer = ContainerSign.none;
+			ContainerSign valueContainer = ContainerSign.None;
 
-			var countContainer20 = Math.Floor (numberOfLiters / (int)ContainerVolume.volume20);
+			var countContainer20 = Math.Floor (numberOfLiters / (int)ContainerVolume.Volume20);
 
 			if (countContainer20 > 0)
 			{
-				numberOfLiters %= (int)ContainerVolume.volume20; 
-				valueContainer |= ContainerSign.liter20; // 0000 | 0100 == 0100
+				numberOfLiters %= (int)ContainerVolume.Volume20; 
+				valueContainer |= ContainerSign.Liter20; // 0000 | 0100 == 0100
 
 			}
 
-			var countContainer5 = Math.Floor (numberOfLiters / (int)ContainerVolume.volume5);
+			var countContainer5 = Math.Floor (numberOfLiters / (int)ContainerVolume.Volume5);
 			if (countContainer5 > 0)
 			{
-				numberOfLiters %= (int)ContainerVolume.volume5;
-				valueContainer |= ContainerSign.liter5;
+				numberOfLiters %= (int)ContainerVolume.Volume5;
+				valueContainer |= ContainerSign.Liter5;
 
 			}
-			var countContainer1 = Math.Ceiling (numberOfLiters / (int)ContainerVolume.volume1);
+			var countContainer1 = Math.Ceiling (numberOfLiters / (int)ContainerVolume.Volume1);
 			if (countContainer1 > 0)
 			{
-				valueContainer |= ContainerSign.liter1; 
+				valueContainer |= ContainerSign.Liter1; 
 
 			}
 
@@ -70,15 +70,15 @@ namespace HW2
 			// 0111
 
 			// 0001
-			if ((valueContainer & ContainerSign.liter1) == ContainerSign.liter1) 
+			if ((valueContainer & ContainerSign.Liter1) == ContainerSign.Liter1) 
 			{
 				Console.WriteLine($"1 л: {countContainer1} шт");
 			}
-			if ((valueContainer & ContainerSign.liter5) == ContainerSign.liter5) 
+			if ((valueContainer & ContainerSign.Liter5) == ContainerSign.Liter5) 
 			{
 				Console.WriteLine($"5 л: {countContainer5} шт");
 			}
-			if ((valueContainer & ContainerSign.liter20) == ContainerSign.liter20) // 0100 & 0100 == 0100
+			if ((valueContainer & ContainerSign.Liter20) == ContainerSign.Liter20) // 0100 & 0100 == 0100
 			{
 				Console.WriteLine($"20 л: {countContainer20}шт");
 			}
