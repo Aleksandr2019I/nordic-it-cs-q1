@@ -5,7 +5,7 @@ namespace test
     [Flags]
     enum Figures
     {
-        None = 0,
+
         Circle = 1,     // круг
         EquilateralTriangle = 2, // равносторонний треугольник equilateralTriangle
         Rectangle = 3 // прямоугольник rectangle
@@ -14,23 +14,17 @@ namespace test
     {
         static void Main()
         {
-            var fig = GetColors();
-            Console.WriteLine($"{fig}");
+            var color = typeof(Figures);
+            Console.Write("цвета и их соответствующие значения: ");
+            foreach (string s in Enum.GetNames(color))
+                Console.Write("{0,2} = {1} ", s, Enum.Format(color, Enum.Parse(color, s), "d"));
+
+
             Console.ReadKey();
-           
         }
-        static Figures GetColors()
-        {
-            var result = Figures.None;
-            var values = (Figures[])Enum.GetValues(typeof(Figures));
 
-            for (var i = 0; i < values.Length; i++)
-            {
-                result = result | values[i];
-            }
 
-            return result;
-        }
+
 
 
 
