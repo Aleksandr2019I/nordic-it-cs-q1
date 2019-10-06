@@ -40,14 +40,13 @@ namespace HW5
 
             int input = ReadInteger();
 
-            
+            try
+            {
                 switch (input)
 
                 {
 
                     case (int)Figures.Circle:
-                    try
-                    {
                         Console.WriteLine("Вы выбрали круг, введите его диаметр");
                         double diameter = double.Parse(Console.ReadLine());
                         Console.WriteLine($"{diameter}");
@@ -56,24 +55,8 @@ namespace HW5
                         var circleLength = 2 * Math.PI * radius; // Длина периметра круга
                         Console.WriteLine($"Площадь поверхности: {areaCircle} ");
                         Console.WriteLine($"Длина периметра: {circleLength} ");
-                         }
-                    catch (ArgumentOutOfRangeException ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
-                    catch (Exception all)
-                    {
-                        Console.WriteLine(all);
-                    }
                         break;
-                   
-                case (int)Figures.EquilateralTriangle:
-                    try
-                    {
+                    case (int)Figures.EquilateralTriangle:
                         Console.WriteLine("Вы выбрали треугольник, введите длину строны");
                         double sideLength = double.Parse(Console.ReadLine());
                         Console.WriteLine($"{sideLength}");
@@ -81,23 +64,8 @@ namespace HW5
                         var areaTriangle = (Math.Sqrt(3) / 4) * Math.Pow(sideLength, 2); // Площадь поверхности равн.треугольника
                         Console.WriteLine($"Площадь поверхности: {areaTriangle} ");
                         Console.WriteLine($"Длина периметра: {triangleLength} ");
-                    }
-                    catch (ArgumentOutOfRangeException ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
-                    catch (Exception all)
-                    {
-                        Console.WriteLine(all);
-                    }
-                    break;
+                        break;
                     case (int)Figures.Rectangle:
-                    try
-                    {
                         Console.WriteLine("Вы выбрали прямоугольник, введите высоту");
                         double heightRectanle = double.Parse(Console.ReadLine()); // высота прямоугольник
                         Console.WriteLine($" высота {heightRectanle}");
@@ -109,8 +77,14 @@ namespace HW5
                         Console.WriteLine($"Площадь" +
                             $" поверхности: {areaRectanle} ");
                         Console.WriteLine($"Длина периметра: {rectanleLength} ");
+                        break;
+                    default:
+                        Console.WriteLine("введено невереное значение");
+                        break;
+                }
+
             }
-                    catch (ArgumentOutOfRangeException ex)
+            catch (ArgumentOutOfRangeException ex)
             {
                 Console.WriteLine(ex);
             }
@@ -122,25 +96,35 @@ namespace HW5
             {
                 Console.WriteLine(all);
             }
-            break;
-                    default:
-                        Console.WriteLine("введено невереное значение");
-                        break;
-                }
-
-            
 
 
                 Console.ReadKey();
         }
         static int ReadInteger()
         {
-            var input = int.Parse(Console.ReadLine());
-            if (input <= 0 || input > 3)
-            {
-                throw new Exception("неверное значение");
-            }
-            return input;
+
+            while (true)
+                {
+                try
+                {
+                    Console.WriteLine("Введите номер фигуры от 1 до 3");
+                    var input = int.Parse(Console.ReadLine());
+                    if (input == 1 || input == 2 || input == 3)
+                    {
+                        Console.WriteLine("идем дальше");
+                        return input;
+                    }
+                                        
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (OverflowException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                }
         }
     
     }
