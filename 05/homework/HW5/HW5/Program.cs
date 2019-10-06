@@ -86,15 +86,15 @@ namespace HW5
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
             catch (Exception all)
             {
-                Console.WriteLine(all);
+                Console.WriteLine(all.Message);
             }
 
 
