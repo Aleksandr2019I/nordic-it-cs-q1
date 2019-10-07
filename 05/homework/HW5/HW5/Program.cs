@@ -86,7 +86,7 @@ namespace HW5
             {
                 try
                 {
-                    double diameter = double.Parse(Console.ReadLine());
+                    double diameter = ReadValueParameters();
                     Console.WriteLine($"{diameter}");
                     var radius = diameter / 2; // радиус
                     var areaCircle = Math.PI * Math.Pow(radius, 2); // Площадь поверхности круга
@@ -111,7 +111,7 @@ namespace HW5
             {
                 try
                 {
-                    double sideLength = double.Parse(Console.ReadLine());
+                    double sideLength = ReadValueParameters();
                     Console.WriteLine($"{sideLength}");
                     var triangleLength = 3 * sideLength; // длина периметра равн.треугольника
                     var areaTriangle = (Math.Sqrt(3) / 4) * Math.Pow(sideLength, 2); // Площадь поверхности равн.треугольника
@@ -136,9 +136,9 @@ namespace HW5
                 try
                 {
                     Console.WriteLine("введите высоту");
-                    var heightRectanle = ReadParametersRectanle(); // высота прямоугольник
+                    var heightRectanle = ReadValueParameters(); // высота прямоугольник
                     Console.WriteLine("введите ширину");
-                    var widthRectangle = ReadParametersRectanle(); // ширина прямоугольник
+                    var widthRectangle = ReadValueParameters(); // ширина прямоугольник
                     var areaRectanle = heightRectanle * widthRectangle; // площадь прямоугольника
                     var rectanleLength = 2 * (heightRectanle + widthRectangle); // длина прямоугольника
                     Console.WriteLine($"Площадь поверхности: {areaRectanle} ");
@@ -155,7 +155,7 @@ namespace HW5
                 }
             }
         }
-        static double ReadParametersRectanle()
+        static double ReadValueParameters()
         {
             while (true)
             {
