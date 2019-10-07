@@ -23,7 +23,7 @@ namespace HW5
    */
     [Flags]
     enum Figures
-    { 
+    {
         None = 0,
         Circle = 1,     // круг
         EquilateralTriangle = 2, // равносторонний треугольник equilateralTriangle
@@ -33,13 +33,13 @@ namespace HW5
     {
         static void Main()
         {
-            
-                Console.WriteLine($"Выбрите тип фигуры ({(int)Figures.Circle} - {Figures.Circle}," +
-                    $"{(int)Figures.EquilateralTriangle} - {Figures.EquilateralTriangle}," +
-                    $"{(int)Figures.Rectangle} - {Figures.Rectangle})");
+
+            Console.WriteLine($"Выбрите тип фигуры ({(int)Figures.Circle} - {Figures.Circle}," +
+                $"{(int)Figures.EquilateralTriangle} - {Figures.EquilateralTriangle}," +
+                $"{(int)Figures.Rectangle} - {Figures.Rectangle})");
 
             int input = ReadTypeFigures();
-            
+
             try
             {
                 switch (input)
@@ -80,7 +80,7 @@ namespace HW5
         {
 
             while (true)
-                {
+            {
                 try
                 {
                     Console.WriteLine("Введите номер фигуры от 1 до 3");
@@ -89,7 +89,7 @@ namespace HW5
                     {
                         return input;
                     }
-                                        
+
                 }
                 catch (FormatException ex)
                 {
@@ -99,7 +99,7 @@ namespace HW5
                 {
                     Console.WriteLine(ex.Message);
                 }
-                }
+            }
         }
         static double ReadParametersCircle()
         {
@@ -107,7 +107,7 @@ namespace HW5
             while (true)
             {
                 try
-                {                    
+                {
                     double diameter = double.Parse(Console.ReadLine());
                     Console.WriteLine($"{diameter}");
                     var radius = diameter / 2; // радиус
@@ -134,7 +134,7 @@ namespace HW5
             while (true)
             {
                 try
-                {                   
+                {
                     double sideLength = double.Parse(Console.ReadLine());
                     Console.WriteLine($"{sideLength}");
                     var triangleLength = 3 * sideLength; // длина периметра равн.треугольника
