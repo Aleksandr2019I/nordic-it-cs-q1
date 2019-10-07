@@ -33,52 +33,32 @@ namespace HW5
     {
         static void Main()
         {
-
             Console.WriteLine($"Выбрите тип фигуры ({(int)Figures.Circle} - {Figures.Circle}," +
                 $"{(int)Figures.EquilateralTriangle} - {Figures.EquilateralTriangle}," +
                 $"{(int)Figures.Rectangle} - {Figures.Rectangle})");
-
             int input = ReadTypeFigures();
-
-            try
+            switch (input)
             {
-                switch (input)
-
-                {
-
-                    case (int)Figures.Circle:
-                        Console.WriteLine("Вы выбрали круг, введите его диаметр");
-                        double diameter = ReadParametersCircle();
-                        break;
-                    case (int)Figures.EquilateralTriangle:
-                        Console.WriteLine("Вы выбрали треугольник, введите длину строны");
-                        double sideLength = ReadParametersTriangle();
-                        break;
-                    case (int)Figures.Rectangle:
-                        Console.WriteLine("Вы выбрали прямоугольник");
-                        double heightRectanle = ReadParametersRectangle();
-                        break;
-                    default:
-                        Console.WriteLine("введено невереное значение");
-                        break;
-                }
-
+                case (int)Figures.Circle:
+                    Console.WriteLine("Вы выбрали круг, введите его диаметр");
+                    double diameter = ReadParametersCircle();
+                    break;
+                case (int)Figures.EquilateralTriangle:
+                    Console.WriteLine("Вы выбрали треугольник, введите длину строны");
+                    double sideLength = ReadParametersTriangle();
+                    break;
+                case (int)Figures.Rectangle:
+                    Console.WriteLine("Вы выбрали прямоугольник");
+                    double heightRectanle = ReadParametersRectangle();
+                    break;
+                default:
+                    Console.WriteLine("введено невереное значение");
+                    break;
             }
-            catch (FormatException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (OverflowException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
             Console.ReadKey();
         }
         static int ReadTypeFigures()
         {
-
             while (true)
             {
                 try
@@ -89,7 +69,6 @@ namespace HW5
                     {
                         return input;
                     }
-
                 }
                 catch (FormatException ex)
                 {
@@ -103,7 +82,6 @@ namespace HW5
         }
         static double ReadParametersCircle()
         {
-
             while (true)
             {
                 try
@@ -116,7 +94,6 @@ namespace HW5
                     Console.WriteLine($"Площадь поверхности: {areaCircle} ");
                     Console.WriteLine($"Длина периметра: {circleLength} ");
                     return diameter;
-
                 }
                 catch (FormatException ex)
                 {
@@ -130,7 +107,6 @@ namespace HW5
         }
         static double ReadParametersTriangle()
         {
-
             while (true)
             {
                 try
@@ -142,7 +118,6 @@ namespace HW5
                     Console.WriteLine($"Площадь поверхности: {areaTriangle} ");
                     Console.WriteLine($"Длина периметра: {triangleLength} ");
                     return sideLength;
-
                 }
                 catch (FormatException ex)
                 {
@@ -156,7 +131,6 @@ namespace HW5
         }
         static double ReadParametersRectangle()
         {
-
             while (true)
             {
                 try
@@ -170,7 +144,6 @@ namespace HW5
                     Console.WriteLine($"Площадь поверхности: {areaRectanle} ");
                     Console.WriteLine($"Длина периметра: {rectanleLength} ");
                     return heightRectanle;
-
                 }
                 catch (FormatException ex)
                 {
@@ -186,13 +159,10 @@ namespace HW5
         {
             while (true)
             {
-                double valueRectangle = double.Parse(Console.ReadLine()); // высота прямоугольник
-                Console.WriteLine($" число {valueRectangle}");
-                return valueRectangle;
+                double input = double.Parse(Console.ReadLine()); // высота прямоугольник
+                Console.WriteLine($" число {input}");
+                return input;
             }
-
         }
-
-
     }
 }
