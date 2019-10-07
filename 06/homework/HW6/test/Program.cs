@@ -20,7 +20,7 @@ namespace test
             number = Math.DivRem(number, 10, out int rez);
             if ((rez % 2) == 0)
             {
-                count = count + count;
+                count++;
             }
             
             }

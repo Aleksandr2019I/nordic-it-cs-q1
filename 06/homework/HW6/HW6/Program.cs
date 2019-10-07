@@ -9,44 +9,49 @@ namespace HW6
             Console.WriteLine("Введите положительное натуральное число не более 2 миллиардов:");
             while (true)
             {
-
                 try
                 {
-
                     int number = int.Parse(Console.ReadLine());
 
-                    else 
+                    if (number > 0)
+                    {
+                        var count = 0;
+                        var numbers = 0;                           
+                            numbers = Math.DivRem(number, 10, out int rezult);
+
+                            if ((rezult % 2) == 0)
+                            {
+                                 count++;
+                            
+                            }
+                            
+                        Console.WriteLine($"в числе {number} содержится следующее количество четных цифр:{count} ");
+                        Console.WriteLine("Нажмите любую клавишу для выхода...");
+                        Console.ReadKey();
+                        break;
+                    }
+                    else
                     {
                         Console.WriteLine("Введено неверное значение! Попробуйте ещё раз:");
                     }
                 }
-                catch (OverflowException ex)
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"Ошибка {ex.StackTrace}! Попробуйте еще раз:");
+                    Console.WriteLine($"Ошибка {ex.Message}! Попробуйте еще раз:");
+
+                  
                 }
-                catch (FormatException ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine($"Ошибка {ex.Message}! Попробуйте еще раз:");
                 }
             }
-
-
+            
         }
-        static int Bll()
-        {
-            if (number > 0)
-            {
-                int count = 0;
 
-                var x = Math.DivRem(number, 10, out int result);
-                if ((result % 2) == 0)
-}
-            Console.WriteLine($"в числе {number} содержится следующее количество четных цифр:{count} ");
-            Console.WriteLine("Нажмите любую клавишу для выхода...");
-            Console.ReadKey();
-            break;
-        }
+
     }
 
-    }
+
 }
+
