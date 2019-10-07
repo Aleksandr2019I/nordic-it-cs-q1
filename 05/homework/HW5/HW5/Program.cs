@@ -136,9 +136,9 @@ namespace HW5
                 try
                 {
                     Console.WriteLine("введите высоту");
-                    var heightRectanle = ReadNumberRectanle(); // высота прямоугольник
+                    var heightRectanle = ReadParametersRectanle(); // высота прямоугольник
                     Console.WriteLine("введите ширину");
-                    var widthRectangle = ReadNumberRectanle(); // ширина прямоугольник
+                    var widthRectangle = ReadParametersRectanle(); // ширина прямоугольник
                     var areaRectanle = heightRectanle * widthRectangle; // площадь прямоугольника
                     var rectanleLength = 2 * (heightRectanle + widthRectangle); // длина прямоугольника
                     Console.WriteLine($"Площадь поверхности: {areaRectanle} ");
@@ -155,7 +155,7 @@ namespace HW5
                 }
             }
         }
-        static double ReadNumberRectanle()
+        static double ReadParametersRectanle()
         {
             while (true)
             {
