@@ -6,14 +6,17 @@ namespace HW6
     {
         static void Main()
         {
-            int evenNumber = Even();
-            Console.WriteLine($"числе  содержится следующее количество четных цифр:{evenNumber}");
+            
+			var number = ReadNumbers();
+			int evenNumber = Even(number);
+
+			Console.WriteLine($"числе {number}  содержится следующее количество четных цифр:{evenNumber}");
             Console.WriteLine("Нажмите любую клавишу для выхода...");
             Console.ReadKey();
         }
-        static int Even()
+        static int Even(int number)
         {
-            var calculationResult = ReadNumbers();
+            var calculationResult = number;
             var count = 0;
             while (calculationResult > 0)
             {
@@ -42,7 +45,7 @@ namespace HW6
                         return naturalNumber;
                     }
                 }
-                catch (OverflowException)
+                catch (OverflowException ex)
                 {
                     Console.WriteLine("Ошибка System.OverflowException! Попробуйте ещё раз:");
                 }
