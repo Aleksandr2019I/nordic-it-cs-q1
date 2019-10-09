@@ -99,22 +99,11 @@ namespace HW5
         {
             while (true)
             {
-                try
+                if (double.TryParse(Console.ReadLine(), out var input)) //проверка на число
                 {
-                    if (double.TryParse(Console.ReadLine(), out var input)) //проверка на число
-                    {
-                        return input;
-                    }
-                    Console.WriteLine("неверное значение");
+                    return input;
                 }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch (OverflowException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                Console.WriteLine("неверное значение");
             }
 
         }

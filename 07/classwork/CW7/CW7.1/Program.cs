@@ -33,7 +33,7 @@ namespace CW7._1
             string textClean = text.TrimEnd(); // remove the spaces at the end of the line
             int lastSpaceIndex = textClean.LastIndexOf(' '); // looking for the position of the last space char
             textClean = textClean.Substring(0, lastSpaceIndex); // cutting string from 0 to lastSpaceIndex
-           textClean = textClean.TrimEnd(); // clean up the tail А зачем тут еще раз?
+            textClean = textClean.TrimEnd(); // clean up the tail А зачем тут еще раз?
             Console.WriteLine(textClean); // this is it :)          
 
             Console.ReadKey();
