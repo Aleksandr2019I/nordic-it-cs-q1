@@ -41,15 +41,33 @@ namespace HW5
             {
                 case (int)Figures.Circle:
                     Console.WriteLine("Вы выбрали круг, введите его диаметр");
-                    double diameter = ReadParametersCircle();
+                    double diameter = ReadValueParameters();
+                    Console.WriteLine($"{diameter}");
+                    var radius = diameter / 2; // радиус
+                    var areaCircle = Math.PI * Math.Pow(radius, 2); // Площадь поверхности круга
+                    var circleLength = 2 * Math.PI * radius; // Длина периметра круга
+                    Console.WriteLine($"Площадь поверхности: {areaCircle} ");
+                    Console.WriteLine($"Длина периметра: {circleLength} ");
                     break;
                 case (int)Figures.EquilateralTriangle:
                     Console.WriteLine("Вы выбрали треугольник, введите длину строны");
-                    double sideLength = ReadParametersTriangle();
+                    double sideLength = ReadValueParameters();
+                    Console.WriteLine($"{sideLength}");
+                    var triangleLength = 3 * sideLength; // длина периметра равн.треугольника
+                    var areaTriangle = (Math.Sqrt(3) / 4) * Math.Pow(sideLength, 2); // Площадь поверхности равн.треугольника
+                    Console.WriteLine($"Площадь поверхности: {areaTriangle} ");
+                    Console.WriteLine($"Длина периметра: {triangleLength} ");
                     break;
                 case (int)Figures.Rectangle:
                     Console.WriteLine("Вы выбрали прямоугольник");
-                    double heightRectanle = ReadParametersRectangle();
+                    Console.WriteLine("введите высоту");
+                    var heightRectanle = ReadValueParameters(); // высота прямоугольник
+                    Console.WriteLine("введите ширину");
+                    var widthRectangle = ReadValueParameters(); // ширина прямоугольник
+                    var areaRectanle = heightRectanle * widthRectangle; // площадь прямоугольника
+                    var rectanleLength = 2 * (heightRectanle + widthRectangle); // длина прямоугольника
+                    Console.WriteLine($"Площадь поверхности: {areaRectanle} ");
+                    Console.WriteLine($"Длина периметра: {rectanleLength} ");
                     break;
                 default:
                     Console.WriteLine("введено невереное значение");
@@ -80,92 +98,18 @@ namespace HW5
                 }
             }
         }
-        static double ReadParametersCircle()
-        {
-            while (true)
-            {
-                try
-                {
-                    double diameter = ReadValueParameters();
-                    Console.WriteLine($"{diameter}");
-                    var radius = diameter / 2; // радиус
-                    var areaCircle = Math.PI * Math.Pow(radius, 2); // Площадь поверхности круга
-                    var circleLength = 2 * Math.PI * radius; // Длина периметра круга
-                    Console.WriteLine($"Площадь поверхности: {areaCircle} ");
-                    Console.WriteLine($"Длина периметра: {circleLength} ");
-                    return diameter;
-                }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch (OverflowException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-        static double ReadParametersTriangle()
-        {
-            while (true)
-            {
-                try
-                {
-                    double sideLength = ReadValueParameters();
-                    Console.WriteLine($"{sideLength}");
-                    var triangleLength = 3 * sideLength; // длина периметра равн.треугольника
-                    var areaTriangle = (Math.Sqrt(3) / 4) * Math.Pow(sideLength, 2); // Площадь поверхности равн.треугольника
-                    Console.WriteLine($"Площадь поверхности: {areaTriangle} ");
-                    Console.WriteLine($"Длина периметра: {triangleLength} ");
-                    return sideLength;
-                }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch (OverflowException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-        static double ReadParametersRectangle()
-        {
-            while (true)
-            {
-                try
-                {
-                    Console.WriteLine("введите высоту");
-                    var heightRectanle = ReadValueParameters(); // высота прямоугольник
-                    Console.WriteLine("введите ширину");
-                    var widthRectangle = ReadValueParameters(); // ширина прямоугольник
-                    var areaRectanle = heightRectanle * widthRectangle; // площадь прямоугольника
-                    var rectanleLength = 2 * (heightRectanle + widthRectangle); // длина прямоугольника
-                    Console.WriteLine($"Площадь поверхности: {areaRectanle} ");
-                    Console.WriteLine($"Длина периметра: {rectanleLength} ");
-                    return heightRectanle;
-                }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch (OverflowException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
+
         static double ReadValueParameters()
         {
             while (true)
             {
                 try
-                { 
-                if (double.TryParse(Console.ReadLine(), out var input)) //проверка на число
-                {                
-                    return input;
-                }
-                Console.WriteLine("неверное значение");
+                {
+                    if (double.TryParse(Console.ReadLine(), out var input)) //проверка на число
+                    {
+                        return input;
+                    }
+                    Console.WriteLine("неверное значение");
                 }
                 catch (FormatException ex)
                 {
