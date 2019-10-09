@@ -20,7 +20,7 @@ namespace HW6
             var count = 0;
             while (calculationResult > 0)
             {
-                calculationResult = Math.DivRem(calculationResult, 8, out int rezult);
+                calculationResult = Math.DivRem(calculationResult, 10, out int rezult);
                 if ((rezult % 2) == 0)
                 {
                     count++;
@@ -45,8 +45,8 @@ namespace HW6
                         return naturalNumber;
                     }
                 }
-                catch (OverflowException ex)
-                {
+                catch (OverflowException)
+                {                  
                     Console.WriteLine("Ошибка System.OverflowException! Попробуйте ещё раз:");
                 }
                 catch (FormatException)
