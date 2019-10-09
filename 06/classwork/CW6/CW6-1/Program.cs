@@ -34,12 +34,12 @@ namespace CW6_1
                 }
 
                 double sum = bal / marks[i].Length;
-                Console.WriteLine("The average mark for day #{0}, is {1:0.0}",i,sum);
+                Console.WriteLine("The average mark for day #{0}, is {1:0.0}", i, sum);
 
                 sumNed = sum / marks[i].Length;
 
             }
-            Console.WriteLine("The average mark for all the week is {0:0.0}",sumNed);
+            Console.WriteLine("The average mark for all the week is {0:0.0}", sumNed);
 
             Console.ReadKey();
         }
