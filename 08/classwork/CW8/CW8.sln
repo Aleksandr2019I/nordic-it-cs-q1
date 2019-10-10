@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW8", "CW8\CW8.csproj", "{FE39CE8F-F8F7-45EF-8499-5950BCC52CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW8.1", "CW8.1\CW8.1.csproj", "{D457FD89-EE82-442C-AD0E-5EB8BD75CB37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "очередь", "очередь\очередь.csproj", "{3D33EF78-5D4A-4D59-8E1C-DC6B9EB8DC64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FE39CE8F-F8F7-45EF-8499-5950BCC52CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE39CE8F-F8F7-45EF-8499-5950BCC52CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE39CE8F-F8F7-45EF-8499-5950BCC52CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D457FD89-EE82-442C-AD0E-5EB8BD75CB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D457FD89-EE82-442C-AD0E-5EB8BD75CB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D457FD89-EE82-442C-AD0E-5EB8BD75CB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D457FD89-EE82-442C-AD0E-5EB8BD75CB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D33EF78-5D4A-4D59-8E1C-DC6B9EB8DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D33EF78-5D4A-4D59-8E1C-DC6B9EB8DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D33EF78-5D4A-4D59-8E1C-DC6B9EB8DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D33EF78-5D4A-4D59-8E1C-DC6B9EB8DC64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
