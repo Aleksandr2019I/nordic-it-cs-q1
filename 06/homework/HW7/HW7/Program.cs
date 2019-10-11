@@ -22,40 +22,37 @@ namespace HW7
             var day = 0; // кличество дней
             do
             {
-                downPaymentAmount += (downPaymentAmount * dailyIncomePercentage);             
+                downPaymentAmount += (downPaymentAmount * dailyIncomePercentage);
                 day++;
             }
 
             while (downPaymentAmount <= desiredAccumulationAmount);
             {
-                
-                
+
+
             }
             Console.WriteLine($"Необходимое количество дней для накопления желаемой суммы:{day}.");
             Console.WriteLine($"Нажмите любую клавишу для выхода…");
             Console.ReadKey();
-                               
         }
         static decimal ReadValue()
         {
             while (true)
-            { 
-            try
             {
-                decimal input = decimal.Parse(Console.ReadLine());
+                try
+                {
+                    decimal input = decimal.Parse(Console.ReadLine());
                     return input;
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Вы вышли за предел значений");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Вы ввели строку , а нужно число");
+                }
             }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Вы вышли за предел значений");
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Вы ввели строку , а нужно число");
-            }
-                
-            }
-
         }
 
     }
