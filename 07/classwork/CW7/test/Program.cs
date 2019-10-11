@@ -22,8 +22,18 @@ namespace test
         static void Main(string[] args)
         {
             string text = " lorem ipsum dolor sit amet ";
+            StringBuilder sb = new StringBuilder(text);
+
+            sb
+               .Replace("ipsum", "IPSUM")
+               .Remove(21,5)
+               .Remove(0,1);
+                
+
+            Console.WriteLine($"{sb}");
 
             Console.ReadKey();
+            
         }
     }
 }

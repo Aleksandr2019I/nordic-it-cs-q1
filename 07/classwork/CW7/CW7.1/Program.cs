@@ -38,7 +38,5 @@ namespace CW7._1
 
             Console.ReadKey();
 		}      
-
-
 	}
 }

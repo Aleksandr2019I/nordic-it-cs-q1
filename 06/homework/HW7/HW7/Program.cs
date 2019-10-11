@@ -13,22 +13,50 @@ namespace HW7
     {
         static void Main()
         {
-            //var downPaymentAmount = decimal.Parse(Console.ReadLine());
-            //var dailyIncomePercentage = decimal.Parse(Console.ReadLine());
-            //var desiredAccumulationAmount = decimal.Parse(Console.ReadLine());
-            decimal x = 100;
-            decimal y = 0.0003m;
-            decimal z = 200;
-            decimal b = 0;
-
-            for (int i = 0; i < x; i++)
+            Console.WriteLine("Введите сумму первоначального взноса в рублях:");
+            decimal downPaymentAmount = ReadValue();  // начальная сумма
+            Console.WriteLine("Введите ежедневный процент дохода в виде десятичной дроби (1% = 0.01):");
+            decimal dailyIncomePercentage = ReadValue();  // процент в день
+            Console.WriteLine("Введите желаемую сумму накопления в рублях:");
+            decimal desiredAccumulationAmount = ReadValue(); // сумма к которой стремимся
+            var day = 0; // кличество дней
+            do
             {
-                var procent = x * y;
-               
-                Console.WriteLine($"{i},{a}");
+                downPaymentAmount += (downPaymentAmount * dailyIncomePercentage);             
+                day++;
             }
+
+            while (downPaymentAmount <= desiredAccumulationAmount);
+            {
+                
+                
+            }
+            Console.WriteLine($"Необходимое количество дней для накопления желаемой суммы:{day}.");
+            Console.WriteLine($"Нажмите любую клавишу для выхода…");
             Console.ReadKey();
-            
+                               
         }
+        static decimal ReadValue()
+        {
+            while (true)
+            { 
+            try
+            {
+                decimal input = decimal.Parse(Console.ReadLine());
+                    return input;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Вы вышли за предел значений");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Вы ввели строку , а нужно число");
+            }
+                
+            }
+
+        }
+
     }
 }
