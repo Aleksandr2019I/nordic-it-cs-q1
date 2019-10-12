@@ -25,12 +25,7 @@ namespace HW7
                 downPaymentAmount += (downPaymentAmount * dailyIncomePercentage);
                 day++;
             }
-
             while (downPaymentAmount <= desiredAccumulationAmount);
-            {
-
-
-            }
             Console.WriteLine($"Необходимое количество дней для накопления желаемой суммы:{day}.");
             Console.WriteLine($"Нажмите любую клавишу для выхода…");
             Console.ReadKey();
