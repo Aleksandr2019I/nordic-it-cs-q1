@@ -29,7 +29,6 @@ namespace HW7
                     Console.WriteLine($"Количество слов, начинающихся с буквы 'А':{j}");
                     Console.WriteLine("Нажмите любую клавишу для выхода...");
                 }
-                Console.ReadKey();
             }
         }
         static string Readtext()
