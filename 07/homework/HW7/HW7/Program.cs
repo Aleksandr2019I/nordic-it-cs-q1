@@ -7,11 +7,12 @@ namespace HW7
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите строку из нескольких слов:");
             while (true)
             {
                 string word = Readtext();
                 string[] massiv = word.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
+            
                 if (massiv.Length < 2)
                 {
                     Console.WriteLine("Слишком мало слов :( Попробуйте ещё раз:");
@@ -28,12 +29,12 @@ namespace HW7
                     }
                     Console.WriteLine($"Количество слов, начинающихся с буквы 'А':{j}");
                     Console.WriteLine("Нажмите любую клавишу для выхода...");
+                    Console.ReadKey();
                 }
             }
         }
         static string Readtext()
         {
-            Console.WriteLine("Введите строку из нескольких слов:");
             while (true)
             {
                 try
