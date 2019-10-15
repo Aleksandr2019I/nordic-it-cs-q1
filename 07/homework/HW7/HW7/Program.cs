@@ -32,7 +32,7 @@ namespace HW7
 					continue;
 				};
 				string[] massiv = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-				if (massiv.Length < 2 | )
+				if (massiv.Length < 2)
 				{
 					Console.WriteLine("Слишком мало слов :( Попробуйте ещё раз:");
 				}
