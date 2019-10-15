@@ -8,10 +8,8 @@ namespace HW7
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Введите строку из нескольких слов:");
-
 			var word = Readtext();
-
-			int j = default(int);
+			int j = default;
 			for (int i = 0; i < word.Length; i++)
 			{
 				if (word[i].ToLowerInvariant().StartsWith('a') | word[i].ToLowerInvariant().StartsWith('а'))
@@ -27,16 +25,18 @@ namespace HW7
 		{
 			while (true)
 			{
-				
-					string input = Console.ReadLine();
-					string[] massiv = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-					if (massiv.Length < 2 |)
-					{
-						Console.WriteLine("Слишком мало слов :( Попробуйте ещё раз:");
-					}
-					return massiv;
-				
-		
+				string input = Console.ReadLine();
+				if (String.IsNullOrWhiteSpace(input))
+				{
+					Console.WriteLine("Строка пустая");
+					continue;
+				};
+				string[] massiv = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+				if (massiv.Length < 2 | )
+				{
+					Console.WriteLine("Слишком мало слов :( Попробуйте ещё раз:");
+				}
+				return massiv;
 			}
 		}
 	}
