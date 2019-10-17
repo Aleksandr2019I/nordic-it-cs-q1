@@ -16,13 +16,13 @@ namespace CW10
 		public Pet()
 		{
 		}
-		public string Description
-		{
-			get
-			{
-				return $"The lalal {Name},{Kind},{Sex},{Age}";
-			}
-		}
+		//public string Description
+		//{
+		//	get
+		//	{
+		//		return $"The lalal {Name},{Kind},{Sex},{Age}";
+		//	}
+		//}
 
 		public string Description =>
 			$"The lalal {Name},{Kind},{Sex},{Age}";
