@@ -6,7 +6,9 @@ namespace HW8
     {
         static void Main(string[] args)
         {
+            var text = Console.ReadLine();
           
+
         }
     }
 }
