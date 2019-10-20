@@ -2,9 +2,11 @@
 
 namespace HW10
 {
-    class People
+    class People //Люди
     {
         string _name; //ИМЯ
+        int _age; // Возраст
+        int LaterAge { get; set; }
         public string Name
         {
             get { return _name; }
@@ -12,36 +14,35 @@ namespace HW10
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("В имени не должно быть пробелов или пустых строк");
+                    throw new ArgumentException("Вы ввели некоректное значение");
                 }
                 _name = value;
             }
         }
-        int _age; // Возраст
         public int Age
         {
             get { return _age; }
             set
             {
-                if (value <= 0)
+                if (value >= 0)
                 {
                     throw new ArgumentException("Вы ввели некоректное значение");
                 }
                 _age = value;
             }
         }
-        //int LaterAge { get; set; } // возраст Спустя 4 года
-
-        // string FinalyStr { get; set; } //финальная строка
         public People() //компилятор дописывает автоматом
-        { }
-        public People(string Name, int Age) //компилятор описывает автоматом
         {
-            
+                Console.WriteLine($"имя ");
+                _name = Console.ReadLine();
+                Console.WriteLine($"Возраст ");
+                _age = int.Parse(Console.ReadLine());
+                LaterAge = _age + 4;                    
         }
-        public string Description =>
-            $"{Age + 4}";
+      
+        string Description =>
+            $"{LaterAge}";
         public string AllDescription =>
-            $"Name: {Name}, age in 4 years:{Description}";
+            $"Name: {_name}, age in 4 years:{Description}.";
     }
 }
