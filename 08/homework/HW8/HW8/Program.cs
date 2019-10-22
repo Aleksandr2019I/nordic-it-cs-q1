@@ -6,12 +6,9 @@ namespace HW8
 	{
 		static void Main()
 		{
-
 			var text = Console.ReadLine();
 			char[] array = text.ToCharArray();
-
 			Stack<char> stack = new Stack<char>();
-
 			for (int i = 0; i < array.Length; i++)
 			{
 				switch (array[i])
@@ -33,7 +30,6 @@ namespace HW8
 						{
 							// что-то пошло не так
 						}
-
 						break;
 					case ']':
 						if (stack.Peek() == '[')
@@ -47,11 +43,8 @@ namespace HW8
 						break;
 					default:
 						break;
-						
 				}
-
 			}
-			
 			Console.ReadKey();
 		}
 	}

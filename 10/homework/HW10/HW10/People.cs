@@ -24,7 +24,7 @@ namespace HW10
             get { return _age; }
             set
             {
-                if (value >= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException("Вы ввели некоректное значение");
                 }
