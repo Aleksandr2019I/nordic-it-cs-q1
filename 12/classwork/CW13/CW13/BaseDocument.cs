@@ -6,12 +6,20 @@ namespace CW13
 		public string Title		{get;set ;}
 		public string Number { get; set; }
 		public DateTimeOffset IssueDate { get; set; }
-		public string Description =>
+
+		public BaseDocument(string title,string number,DateTimeOffset issueDate)
+		{
+			Title = title;
+			Number = number;
+			IssueDate = issueDate;
+		}
+
+		public virtual string Description =>
 			$"{Title},{Number},{IssueDate}";
 
 		public void WriteToConsole()
 		{
-			Console.WriteLine(Description);
+			 Console.WriteLine(Description);
 		}
 	};
 }

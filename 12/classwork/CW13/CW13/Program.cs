@@ -6,22 +6,16 @@ namespace CW13
 	{
 		static void Main(string[] args)
 		{
-			BaseDocument proga = new BaseDocument
-			{
-				Title = "abc",
-				Number = "1",
-				IssueDate = new DateTimeOffset(new DateTime(2010,11,02)),
-			};
+			BaseDocument proga = new BaseDocument("abc", "35", DateTimeOffset.Parse("2017-10-15"));
 
 
-			Passport pass = new Passport
-			{
-				Country = "fllfl",
-				PersonName="Multy"
+			proga.WriteToConsole();
 
-			};
+			Passport pass = new Passport("Pypu", "Multy", "23", DateTimeOffset.Parse("2017-8-11"));
 
-			
+			pass.WriteToConsole();
+
+			Console.ReadKey();
 		}
 	}
 }
