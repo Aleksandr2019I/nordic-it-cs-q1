@@ -10,7 +10,14 @@ namespace HW10
             People[] parametr = new People[3];
             for (int j = 0; j < 3; j++)
             {
-                parametr[j] = new People();
+                Console.WriteLine($"имя {j}");
+                var name = Console.ReadLine();
+                Console.WriteLine($"Возраст {j}");
+                var age = byte.Parse(Console.ReadLine());
+                parametr[j] = new People(name,age);
+                
+
+                
             };
             for (int i = 0; i < parametr.Length; i++)
             {

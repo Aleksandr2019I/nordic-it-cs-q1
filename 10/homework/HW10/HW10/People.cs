@@ -5,8 +5,7 @@ namespace HW10
     class People //Люди
     {
         string _name; //ИМЯ
-        int _age; // Возраст
-        int LaterAge { get; set; }
+        byte _age; // Возраст
         public string Name
         {
             get { return _name; }
@@ -19,7 +18,7 @@ namespace HW10
                 _name = value;
             }
         }
-        public int Age
+        public byte Age
         {
             get { return _age; }
             set
@@ -31,18 +30,19 @@ namespace HW10
                 _age = value;
             }
         }
-        public People() //компилятор дописывает автоматом
+        public People(string _name, byte _age) //компилятор дописывает автоматом
         {
-                Console.WriteLine($"имя ");
-                _name = Console.ReadLine();
-                Console.WriteLine($"Возраст ");
-                _age = int.Parse(Console.ReadLine());
-                LaterAge = _age + 4;                    
+
+            Name = _name;
+            Age = _age;
+         
         }
-      
-        string Description =>
-            $"{LaterAge}";
+
+        byte LiterAge
+        {
+            get { return (byte)(_age + 4); }
+        }
         public string AllDescription =>
-            $"Name: {_name}, age in 4 years:{Description}.";
+            $"Name: {_name}, age in 4 years:{LiterAge}.";
     }
 }
