@@ -14,10 +14,7 @@ namespace HW10
                 var name = Console.ReadLine();
                 Console.WriteLine($"Возраст {j}");
                 var age = byte.Parse(Console.ReadLine());
-                parametr[j] = new People(name,age);
-                
-
-                
+                parametr[j] = new People(name, age);
             };
             for (int i = 0; i < parametr.Length; i++)
             {

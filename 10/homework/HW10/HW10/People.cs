@@ -32,12 +32,9 @@ namespace HW10
         }
         public People(string _name, byte _age) //компилятор дописывает автоматом
         {
-
             Name = _name;
             Age = _age;
-         
         }
-
         byte LiterAge
         {
             get { return (byte)(_age + 4); }
