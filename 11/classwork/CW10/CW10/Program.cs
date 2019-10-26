@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace CW11
+{ 
 	class Program
 	{
 		static void Main(string[] args)
