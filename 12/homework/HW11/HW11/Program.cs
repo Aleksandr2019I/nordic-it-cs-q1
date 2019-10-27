@@ -12,5 +12,6 @@ namespace HW11
             alarm1.WriteProperties();
             Console.ReadKey();
         }
-    }    
+    }
+ 
 }

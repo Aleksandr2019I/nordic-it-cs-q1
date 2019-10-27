@@ -32,31 +32,4 @@ namespace HW11
 
         }
     }
-
-
-
-    class PhoneReminderItem : Reminderitem 
-    { 
-        public string PhoneNumber { get; set; }
-
-        public PhoneReminderItem(DateTimeOffset alarmDate, string alarmMessage,string phoneNumber): base(alarmDate, alarmMessage)
-        {
-            PhoneNumber = phoneNumber;
-
-
-        }
-
-        public new void WriteProperties()
-        {
-            Console.WriteLine($"AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated}");
-
-        }
-
-    }
-
-    class ChatReminderItem : Reminderitem 
-    {
-        
-    }
-    
 }

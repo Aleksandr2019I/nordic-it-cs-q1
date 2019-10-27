@@ -7,18 +7,26 @@ namespace HW10
         static void Main()
         {
             Console.WriteLine("Введите имя и возраст для 3 человек");
-            People[] parametr = new People[3];
+            People[] characteristics = new People[3];
             for (int j = 0; j < 3; j++)
             {
                 Console.WriteLine($"имя {j}");
                 var name = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("некоректный ввод");
+                }
                 Console.WriteLine($"Возраст {j}");
                 var age = byte.Parse(Console.ReadLine());
-                parametr[j] = new People(name, age);
+                if (age < 0)
+                {
+                    Console.WriteLine("возраст должен быть больше нуля");
+                }
+                characteristics[j] = new People(name, age);
             };
-            for (int i = 0; i < parametr.Length; i++)
+            for (int i = 0; i < characteristics.Length; i++)
             {
-                Console.WriteLine($"{parametr[i].AllDescription}");
+                Console.WriteLine($"{characteristics[i].AllDescription}");
             };
             Console.WriteLine("Press any key to continue..");
             Console.ReadKey();
