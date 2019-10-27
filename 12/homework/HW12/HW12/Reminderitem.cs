@@ -21,22 +21,9 @@ namespace HW12
             AlarmDate = alarmDate;
             AlarmMessage = alarmMessage;
         }
-        public void WriteProperties()
+        public virtual void WriteProperties()
         {
-            Console.WriteLine($"AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated}");
-        }
-    }
-    class PhoneReminderItem : Reminderitem
-    {
-        public string PhoneNumber { get; set; }
-
-        public PhoneReminderItem(DateTimeOffset alarmDate, string alarmMessage, string phoneNumber) : base(alarmDate, alarmMessage)
-        {
-            PhoneNumber = phoneNumber;
-        }
-        public new void WriteProperties()
-        {
-            Console.WriteLine($"AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated}");
+            Console.WriteLine($"Type = {GetType()},  AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated}");
         }
     }
 }
