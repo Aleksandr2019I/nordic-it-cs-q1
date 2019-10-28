@@ -7,34 +7,37 @@ namespace HW8
         static void Main()
         {
             var text = Console.ReadLine();
-            char[] array = text.ToCharArray();
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                Console.WriteLine("Введены неверные символы");
+            };
             Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < text.Length; i++)
             {
                 try
                 {
-                    switch (array[i])
+                    switch (text[i])
                     {
                         case '(':
                         case '[':
-                            stack.Push(array[i]);
+                            stack.Push(text[i]);
                             break;
                         case ')':
+                        //if (stack.Count == 0)
+                        //{
+                        //    throw new InvalidOperationException();
+                        //}
+                        //if (stack.Peek() == '(')
+                        //{
+                        //    stack.Pop();
+                        //}
+                        //break;
+                        case ']':
                             if (stack.Count == 0)
                             {
                                 throw new InvalidOperationException();
                             }
-                            if (stack.Peek() == '(')
-                            {
-                                stack.Pop();
-                            }
-                            break;
-                        case ']':
-                            if (stack.Count == 0)
-                            {
-                               throw new InvalidOperationException();
-                            }
-                            if (stack.Peek() == '[')
+                            if (stack.Peek() == '[' || stack.Peek() == '[')
                             {
                                 stack.Pop();
                             }
@@ -47,7 +50,6 @@ namespace HW8
                 {
                     Console.WriteLine("стек пустой");
                 }
-
             }
             Console.ReadKey();
         }
