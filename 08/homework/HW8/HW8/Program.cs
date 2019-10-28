@@ -6,11 +6,7 @@ namespace HW8
     {
         static void Main()
         {
-            var text = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(text))
-            {
-                Console.WriteLine("Введены неверные символы");
-            };
+            var text = ReadText();
             Stack<char> stack = new Stack<char>();
             for (int i = 0; i < text.Length; i++)
             {
@@ -52,6 +48,21 @@ namespace HW8
                 }
             }
             Console.ReadKey();
+        }
+
+        static string ReadText()
+        {
+            while (true)
+            {
+                Console.WriteLine("Введите строку:");
+                var text = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(text))
+                {
+                    Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
+                    continue;
+                }
+                return text;
+            }
         }
     }
 }
