@@ -10,7 +10,7 @@ namespace HW12
             alarm.WriteProperties();
             var alarm1 = new Reminderitem(new DateTime(2019, 03, 20, 8, 00, 00), "Походу проспали");
             alarm1.WriteProperties();
-
+            //---------------
             List<Reminderitem> list = new List<Reminderitem>();
             list.Add(new Reminderitem(new DateTime(2018, 9, 22, 7, 00, 00), "Ух"));
             list.Add(new PhoneReminderItem(new DateTime(2019, 10, 20, 10, 00, 00), "БУХ", "89661408888"));

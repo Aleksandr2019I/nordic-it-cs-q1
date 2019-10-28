@@ -12,7 +12,7 @@ namespace HW12
         }
         public override void WriteProperties()
         {
-            Console.WriteLine($"Type = {GetType()} ,AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated},ChatName = {ChatName},AccountName = {AccountName} ");
+            Console.WriteLine($"Type = {GetType()} ,AlarmDate = {AlarmDate},AlarmMessage = {AlarmMessage},TimeToAlarm = {TimeToAlarm},IsOutdated = {IsOutdated}, ChatName = {ChatName},AccountName = {AccountName} ");
         }
     }
 }
