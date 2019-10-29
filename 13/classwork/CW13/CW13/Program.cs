@@ -2,18 +2,18 @@
 // abstract readonly protected
 namespace CW13
 {
-	public interface class ITake
+	public interface  ITake
 	{
 		void TakeUpper(int delta);
 		void TakeLower(int delta);
 	}
 
-	public interface class IEnginesCount
+	public interface  IEnginesCount
 	{
-		void EnginesCount();
+		byte EnginesCount { get; set; }
 	}
 
-	public interface class IBladesCount
+	public interface  IBladesCount
 	{
 		void BladesCount();
 	}
