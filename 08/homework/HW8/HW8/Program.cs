@@ -42,7 +42,7 @@ namespace HW8
                         {
                             return false;
                         }
-                        if (stack.Peek() == '[' || stack.Peek() == '[')
+                        if (stack.Peek() == '(' || stack.Peek() == '[')
                         {
                             stack.Pop();
                         }
@@ -56,7 +56,7 @@ namespace HW8
                 }
                 return true;
             }
-            
+            return false;
         }
     }
 }
