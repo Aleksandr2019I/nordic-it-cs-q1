@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d322eb2-4eb2-47ab-a976-3ba7b7c25d4d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding>
+                <marker date="1560253040866" expanded="false" signature="6:51" ph="..." />
+                <marker date="1560253040866" expanded="true" signature="86:1190" ph="{...}" />
+                <marker date="1560253040866" expanded="true" signature="103:1188" ph="{...}" />
+                <marker date="1560253040866" expanded="true" signature="148:1185" ph="{...}" />
+                <marker date="1560253040866" expanded="true" signature="608:651" ph="{...}" />
+                <marker date="1560253040866" expanded="true" signature="952:986" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/MobilePhone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C01_abstract_source/ConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/VideoPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Interfaces/ICaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Device/MobilePhone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/RadioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/ConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Device/RadioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Device/AbstractMusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C01_abstract_source/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Device/VideoPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/AbstractMusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/AbstractMusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/MobilePhone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/MobilePhone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/ConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/VideoPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/RadioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/ConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/RadioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C02_abstract_class/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C06_interface/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/VideoPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/L13_C05_abstract_members_SW/Helicopter.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/L13_C01_abstract_source/Program.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/ConsoleWriter.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/ConsoleWriter.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/ConsoleWriter.cs" />
+        <option value="$PROJECT_DIR$/L13_C01_abstract_source/Device/MobilePhone.cs" />
+        <option value="$PROJECT_DIR$/L13_C01_abstract_source/Device/RadioRecorder.cs" />
+        <option value="$PROJECT_DIR$/L13_C01_abstract_source/Device/VideoPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/Device/AbstractMusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/Device/MobilePhone.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/Device/RadioRecorder.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/Device/VideoPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C02_abstract_class/Program.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/Device/MobilePhone.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/Device/RadioRecorder.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/Device/VideoPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/Program.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Device/AbstractMusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C04_abstract_members/Device/AbstractMusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Device/MobilePhone.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Device/RadioRecorder.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Device/VideoPlayer.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Interfaces/ICaller.cs" />
+        <option value="$PROJECT_DIR$/L13_C06_interface/Program.cs" />
+        <option value="$PROJECT_DIR$/L13_C01_abstract_source/ConsoleWriter.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-912" />
+    <option name="y" value="1080" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C01_abstract_source" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C01_abstract_source" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Device" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C02_abstract_class" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C02_abstract_class" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Device" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C03_abstract_class_SW" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C04_abstract_members" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C04_abstract_members" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Device" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C05_abstract_members_SW" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C06_interface" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C06_interface" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Device" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C06_interface" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Interfaces" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="L13_ClassWork" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="L13_C07_interface_SW" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d322eb2-4eb2-47ab-a976-3ba7b7c25d4d" name="Default Changelist" comment="" />
+      <created>1560250169005</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560250169005</updated>
+      <workItem from="1560250171308" duration="1833000" />
+    </task>
+    <task id="LOCAL-00001" summary="Refactor &amp; simplify design">
+      <created>1560253913043</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560253913043</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactor &amp; simplify design">
+      <created>1560254400163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560254400163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactor &amp; simplify design">
+      <created>1560254442111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560254442111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1833000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-912" y="1080" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Azure Explorer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2863248" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Azure Activity Log" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor &amp; simplify design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor &amp; simplify design" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/L13_C02_abstract_class.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C05_abstract_members_SW/L13_C05_abstract_members_SW.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/ConsoleWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1560253069913" expanded="false" signature="6:84" ph="..." />
+            <marker date="1560253069913" expanded="true" signature="120:814" ph="{...}" />
+            <marker date="1560253069913" expanded="true" signature="150:812" ph="{...}" />
+            <marker date="1560253069913" expanded="true" signature="237:245" ph="{...}" />
+            <marker date="1560253069913" expanded="true" signature="313:506" ph="{...}" />
+            <marker date="1560253069913" expanded="true" signature="544:580" ph="{...}" />
+            <marker date="1560253069913" expanded="true" signature="638:809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/ConsoleWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1560253079380" expanded="false" signature="6:84" ph="..." />
+            <marker date="1560253079380" expanded="true" signature="113:807" ph="{...}" />
+            <marker date="1560253079380" expanded="true" signature="143:805" ph="{...}" />
+            <marker date="1560253079380" expanded="true" signature="230:238" ph="{...}" />
+            <marker date="1560253079380" expanded="true" signature="306:499" ph="{...}" />
+            <marker date="1560253079380" expanded="true" signature="537:573" ph="{...}" />
+            <marker date="1560253079380" expanded="true" signature="631:802" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/ConsoleWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1560253107554" expanded="false" signature="6:84" ph="..." />
+            <marker date="1560253107554" expanded="true" signature="118:812" ph="{...}" />
+            <marker date="1560253107554" expanded="true" signature="148:810" ph="{...}" />
+            <marker date="1560253107554" expanded="true" signature="235:243" ph="{...}" />
+            <marker date="1560253107554" expanded="true" signature="311:504" ph="{...}" />
+            <marker date="1560253107554" expanded="true" signature="542:578" ph="{...}" />
+            <marker date="1560253107554" expanded="true" signature="636:807" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/MobilePhone.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <marker date="1560253178878" expanded="true" signature="55:854" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="83:852" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="215:320" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="347:606" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="393:521" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="646:705" ph="{...}" />
+            <marker date="1560253178878" expanded="true" signature="730:849" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/RadioRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <marker date="1560253260799" expanded="true" signature="55:1302" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="85:1300" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="219:326" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="405:664" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="451:579" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="710:1169" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="765:890" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="933:1046" ph="{...}" />
+            <marker date="1560253260799" expanded="true" signature="1194:1297" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/Device/VideoPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="107" selection-start-line="42" selection-start-column="107" selection-end-line="42" selection-end-column="107" />
+          <folding>
+            <marker date="1560253291785" expanded="true" signature="55:1032" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="83:1030" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="258:363" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="390:649" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="436:564" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="676:893" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="722:829" ph="{...}" />
+            <marker date="1560253291785" expanded="true" signature="918:1027" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/MobilePhone.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <marker date="1560253401676" expanded="true" signature="54:492" ph="{...}" />
+            <marker date="1560253401676" expanded="true" signature="103:490" ph="{...}" />
+            <marker date="1560253401676" expanded="true" signature="163:246" ph="{...}" />
+            <marker date="1560253401676" expanded="true" signature="286:344" ph="{...}" />
+            <marker date="1560253401676" expanded="true" signature="369:487" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/RadioRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="79" lean-forward="true" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
+          <folding>
+            <marker date="1560253419377" expanded="true" signature="54:940" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="106:938" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="169:254" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="352:808" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="407:531" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="574:686" ph="{...}" />
+            <marker date="1560253419377" expanded="true" signature="833:935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/VideoPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <marker date="1560253447414" expanded="true" signature="54:671" ph="{...}" />
+            <marker date="1560253447414" expanded="true" signature="104:669" ph="{...}" />
+            <marker date="1560253447414" expanded="true" signature="208:291" ph="{...}" />
+            <marker date="1560253447414" expanded="true" signature="318:533" ph="{...}" />
+            <marker date="1560253447414" expanded="true" signature="364:470" ph="{...}" />
+            <marker date="1560253447414" expanded="true" signature="558:666" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <marker date="1560253475614" expanded="false" signature="6:50" ph="..." />
+            <marker date="1560253475614" expanded="true" signature="84:1186" ph="{...}" />
+            <marker date="1560253475614" expanded="true" signature="101:1184" ph="{...}" />
+            <marker date="1560253475614" expanded="true" signature="138:1181" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/MobilePhone.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="116" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
+          <folding>
+            <marker date="1560253538792" expanded="true" signature="56:503" ph="{...}" />
+            <marker date="1560253538792" expanded="true" signature="105:501" ph="{...}" />
+            <marker date="1560253538792" expanded="true" signature="165:248" ph="{...}" />
+            <marker date="1560253538792" expanded="true" signature="288:346" ph="{...}" />
+            <marker date="1560253538792" expanded="true" signature="380:498" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/RadioRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <marker date="1560253560458" expanded="true" signature="56:951" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="108:949" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="223:308" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="354:810" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="409:533" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="576:688" ph="{...}" />
+            <marker date="1560253560458" expanded="true" signature="844:946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/VideoPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="106" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
+          <folding>
+            <marker date="1560253593473" expanded="true" signature="56:682" ph="{...}" />
+            <marker date="1560253593473" expanded="true" signature="106:680" ph="{...}" />
+            <marker date="1560253593473" expanded="true" signature="210:293" ph="{...}" />
+            <marker date="1560253593473" expanded="true" signature="320:535" ph="{...}" />
+            <marker date="1560253593473" expanded="true" signature="366:472" ph="{...}" />
+            <marker date="1560253593473" expanded="true" signature="569:677" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <marker date="1560253641253" expanded="false" signature="6:86" ph="..." />
+            <marker date="1560253641253" expanded="true" signature="122:1317" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="139:1315" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="176:1312" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="611:654" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="927:961" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="1182:1240" ph="{...}" />
+            <marker date="1560253641253" expanded="true" signature="1276:1308" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Device/AbstractMusicPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <marker date="1560254356426" expanded="true" signature="6:49" ph="..." />
+            <marker date="1560254356426" expanded="true" signature="85:658" ph="{...}" />
+            <marker date="1560254356426" expanded="true" signature="158:656" ph="{...}" />
+            <marker date="1560254356426" expanded="true" signature="303:332" ph="{...}" />
+            <marker date="1560254356426" expanded="true" signature="359:618" ph="{...}" />
+            <marker date="1560254356426" expanded="true" signature="405:533" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C04_abstract_members/Device/AbstractMusicPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <marker date="1560253779350" expanded="true" signature="56:597" ph="{...}" />
+            <marker date="1560253779350" expanded="true" signature="101:595" ph="{...}" />
+            <marker date="1560253779350" expanded="true" signature="245:273" ph="{...}" />
+            <marker date="1560253779350" expanded="true" signature="300:557" ph="{...}" />
+            <marker date="1560253779350" expanded="true" signature="346:473" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C02_abstract_class/Device/AbstractMusicPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1560253320372" expanded="true" signature="54:560" ph="{...}" />
+            <marker date="1560253320372" expanded="true" signature="99:558" ph="{...}" />
+            <marker date="1560253320372" expanded="true" signature="243:271" ph="{...}" />
+            <marker date="1560253320372" expanded="true" signature="298:555" ph="{...}" />
+            <marker date="1560253320372" expanded="true" signature="344:471" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Device/MobilePhone.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1560254356428" expanded="true" signature="6:49" ph="..." />
+            <marker date="1560254356428" expanded="true" signature="85:572" ph="{...}" />
+            <marker date="1560254356428" expanded="true" signature="171:570" ph="{...}" />
+            <marker date="1560254356428" expanded="true" signature="231:315" ph="{...}" />
+            <marker date="1560254356428" expanded="true" signature="355:414" ph="{...}" />
+            <marker date="1560254356428" expanded="true" signature="448:567" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Device/RadioRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <marker date="1560254356431" expanded="false" signature="0:49" ph="..." />
+            <marker date="1560254356431" expanded="true" signature="85:1029" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="181:1027" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="296:382" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="428:887" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="483:608" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="651:764" ph="{...}" />
+            <marker date="1560254356431" expanded="true" signature="921:1024" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Device/VideoPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <marker date="1560254356434" expanded="true" signature="6:49" ph="..." />
+            <marker date="1560254356434" expanded="true" signature="85:757" ph="{...}" />
+            <marker date="1560254356434" expanded="true" signature="177:755" ph="{...}" />
+            <marker date="1560254356434" expanded="true" signature="281:365" ph="{...}" />
+            <marker date="1560254356434" expanded="true" signature="392:609" ph="{...}" />
+            <marker date="1560254356434" expanded="true" signature="438:545" ph="{...}" />
+            <marker date="1560254356434" expanded="true" signature="643:752" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C05_abstract_members_SW/Helicopter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1559906526603" expanded="true" signature="52:787" ph="{...}" />
+            <marker date="1559906526603" expanded="true" signature="94:785" ph="{...}" />
+            <marker date="1559906526603" expanded="true" signature="217:315" ph="{...}" />
+            <marker date="1559906526603" expanded="true" signature="360:586" ph="{...}" />
+            <marker date="1559906526603" expanded="true" signature="632:782" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Interfaces/ICaller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+          <folding>
+            <marker date="1560254356565" expanded="true" signature="38:107" ph="{...}" />
+            <marker date="1560254356565" expanded="true" signature="66:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/ConsoleWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <marker date="1560254431691" expanded="false" signature="6:84" ph="..." />
+            <marker date="1560254431691" expanded="true" signature="119:751" ph="{...}" />
+            <marker date="1560254431691" expanded="true" signature="149:749" ph="{...}" />
+            <marker date="1560254431691" expanded="true" signature="236:244" ph="{...}" />
+            <marker date="1560254431691" expanded="true" signature="312:505" ph="{...}" />
+            <marker date="1560254431691" expanded="true" signature="584:746" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C06_interface/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <marker date="1560254371608" expanded="true" signature="6:115" ph="..." />
+            <marker date="1560254371608" expanded="true" signature="144:1507" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="161:1505" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="198:667" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="280:625" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="321:375" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="418:506" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="547:620" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="756:1502" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="795:1498" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="919:1009" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="1054:1154" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="1198:1327" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="1362:1408" ph="{...}" />
+            <marker date="1560254371608" expanded="true" signature="1453:1493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L13_C01_abstract_source/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <marker date="1560253040866" expanded="false" signature="6:51" ph="..." />
+            <marker date="1560253040866" expanded="true" signature="86:1190" ph="{...}" />
+            <marker date="1560253040866" expanded="true" signature="103:1188" ph="{...}" />
+            <marker date="1560253040866" expanded="true" signature="148:1185" ph="{...}" />
+            <marker date="1560253040866" expanded="true" signature="608:651" ph="{...}" />
+            <marker date="1560253040866" expanded="true" signature="952:986" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
