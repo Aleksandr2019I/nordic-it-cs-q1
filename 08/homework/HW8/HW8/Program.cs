@@ -28,7 +28,7 @@ namespace HW8
         static bool Check(string text)
         {
             Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < text.Length;)
+            for (int i = 0; i < text.Length;i++)
             {
                 switch (text[i])
                 {
@@ -54,9 +54,11 @@ namespace HW8
                     default:
                         break;
                 }
-                return true;
-            }
-            
-        }
+				
+			}
+			//пустой ли стек,проверка
+			return true;
+
+		}
     }
 }
