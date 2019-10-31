@@ -16,7 +16,7 @@ namespace HW8
             while (true)
             {
                 Console.WriteLine("Введите строку:");
-                var text = Console.ReadLine();
+                var text = "(";
                 if (string.IsNullOrWhiteSpace(text))
                 {
                     Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
@@ -28,37 +28,39 @@ namespace HW8
         static bool Check(string text)
         {
             Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < text.Length;i++)
+            for (int i = 0; i < text.Length; i++)
             {
                 switch (text[i])
                 {
                     case '(':
                     case '[':
+                        Console.WriteLine("записали в стек");
                         stack.Push(text[i]);
                         break;
                     case ')':
                     case ']':
                         if (stack.Count == 0)
                         {
+                            Console.WriteLine("тут стек пуст");
                             return false;
                         }
                         if (stack.Peek() == '(' || stack.Peek() == '[')
                         {
+                            Console.WriteLine("тут скобоку вытолкнули");
                             stack.Pop();
                         }
                         else
                         {
+                            Console.WriteLine("комбинация неверна");
                             return false;
                         }
                         break;
                     default:
-                        break;
+                        Console.WriteLine("тут нету скобок");
+                        return false;
                 }
-				
-			}
-			//пустой ли стек,проверка
-			return true;
-
-		}
+            }
+            return true;
+        }
     }
 }
