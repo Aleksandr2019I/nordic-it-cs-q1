@@ -37,22 +37,6 @@ namespace HW8
                         Console.WriteLine("записали в стек");
                         stack.Push(text[i]);
                         break;
-                    //if (stack.Count == 0)
-                    //{
-                    //    Console.WriteLine("стек пуст");
-                    //    return false;
-                    //}
-                    //if (stack.Peek() == '(')
-                    //{
-                    //    Console.WriteLine("тут скобоку вытолкнули");
-                    //    stack.Pop();
-                    //}
-                    //else
-                    //{
-                    //    Console.WriteLine("комбинация неверна");
-                    //    return false;
-                    //}
-                    //break;
                     case ')':
                     case ']':
                         if (stack.Count == 0)
