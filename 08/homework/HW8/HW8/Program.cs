@@ -16,7 +16,7 @@ namespace HW8
             while (true)
             {
                 Console.WriteLine("Введите строку:");
-                var text = "(";
+                var text = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(text))
                 {
                     Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
@@ -38,13 +38,24 @@ namespace HW8
                         stack.Push(text[i]);
                         break;
                     case ')':
+                        if (stack.Count == 0)
+                        {
+                            Console.WriteLine("стек пуст");
+                            return false;
+                        }
+                        if (stack.Peek() == '(')
+                        {
+                            Console.WriteLine("тут скобоку вытолкнули");
+                            stack.Pop();
+                        }
+                        break;
                     case ']':
                         if (stack.Count == 0)
                         {
-                            Console.WriteLine("тут стек пуст");
+                            Console.WriteLine("стек пуст");
                             return false;
                         }
-                        if (stack.Peek() == '(' || stack.Peek() == '[')
+                        if (stack.Peek() == '[')
                         {
                             Console.WriteLine("тут скобоку вытолкнули");
                             stack.Pop();
@@ -59,6 +70,10 @@ namespace HW8
                         Console.WriteLine("тут нету скобок");
                         return false;
                 }
+            }
+            if (stack.Count > 0)
+            {
+                return false;
             }
             return true;
         }
