@@ -48,6 +48,11 @@ namespace HW8
                             Console.WriteLine("тут скобоку вытолкнули");
                             stack.Pop();
                         }
+                        else
+                        {
+                            Console.WriteLine("комбинация неверна");
+                            return false;
+                        }
                         break;
                     case ']':
                         if (stack.Count == 0)
