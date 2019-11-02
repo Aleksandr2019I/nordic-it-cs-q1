@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace HW8
+namespace _8._1
 {
     class Program
     {
@@ -38,13 +38,29 @@ namespace HW8
                         stack.Push(text[i]);
                         break;
                     case ')':
+                        if (stack.Count == 0)
+                        {
+                            Console.WriteLine("стек пуст");
+                            return false;
+                        }
+                        if (stack.Peek() == '(')
+                        {
+                            Console.WriteLine("тут скобоку вытолкнули");
+                            stack.Pop();
+                        }
+                        else
+                        {
+                            Console.WriteLine("комбинация неверна");
+                            return false;
+                        }
+                        break;
                     case ']':
                         if (stack.Count == 0)
                         {
                             Console.WriteLine("стек пуст");
                             return false;
                         }
-                        if (stack.Peek() == '[' || stack.Peek() == '(')
+                        if (stack.Peek() == '[')
                         {
                             Console.WriteLine("тут скобоку вытолкнули");
                             stack.Pop();
