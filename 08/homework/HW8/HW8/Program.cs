@@ -16,7 +16,7 @@ namespace HW8
             while (true)
             {
                 Console.WriteLine("Введите строку:");
-                var text = Console.ReadLine();
+                var text = "[][)";
                 if (string.IsNullOrWhiteSpace(text))
                 {
                     Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
@@ -38,6 +38,7 @@ namespace HW8
                         stack.Push(text[i]);
                         break;
                     case ')':
+
                     case ']':
                         if (stack.Count == 0)
                         {
@@ -60,11 +61,7 @@ namespace HW8
                         return false;
                 }
             }
-            if (stack.Count > 0)
-            {
-                return false;
-            }
-            return true;
+            return stack.Count == 0;
         }
     }
 }
