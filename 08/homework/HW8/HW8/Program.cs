@@ -16,7 +16,7 @@ namespace HW8
             while (true)
             {
                 Console.WriteLine("Введите строку:");
-                var text = Console.ReadLine();
+                var text = "[][)";
                 if (string.IsNullOrWhiteSpace(text))
                 {
                     Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
