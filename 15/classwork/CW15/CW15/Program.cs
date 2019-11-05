@@ -31,7 +31,7 @@ namespace CW15
 			first.Calculate(Area);
 			first.Calculate(perimtr);
 
-			Console.ReadLine($"{first.}");
+			Console.WriteLine($"{first.Calculate(Area)}");
 
 			Console.ReadKey();
 		}
