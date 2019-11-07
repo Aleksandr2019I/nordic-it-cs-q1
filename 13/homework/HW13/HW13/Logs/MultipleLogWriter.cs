@@ -5,8 +5,6 @@ namespace HW13
 {
     class MultipleLogWriter : ILogWriter
     {
-
-
         List<ILogWriter> list = new List<ILogWriter>
         {
         };
