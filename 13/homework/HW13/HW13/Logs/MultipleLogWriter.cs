@@ -20,16 +20,19 @@ namespace HW13
 
         public void LogInfo(string message)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy:MM:ddThh:mm:ss}+00:00\t{HW13.MessageType.Info} \t{message} ");
+			list[0].LogInfo(message);
+			list[1].LogInfo(message);
         }
         public void LogWarning(string message)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy:MM:ddThh:mm:ss}+00:00\t{HW13.MessageType.Warnig} \t{message}");
-        }
+			list[0].LogWarning(message);
+			list[1].LogWarning(message);
+		}
         public void LogError(string message)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy:MM:ddThh:mm:ss}+00:00\t{HW13.MessageType.Error}\t{message}");
-        }
+			list[0].LogError(message);
+			list[1].LogError(message);
+		}
     }
 
 }
