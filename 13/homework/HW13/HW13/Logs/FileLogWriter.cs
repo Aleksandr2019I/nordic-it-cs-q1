@@ -11,15 +11,15 @@ namespace HW13
     {
         public void LogInfo(string message)
         {
-			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Info} \t{message}");
+			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Info} \t{message} " + "\n");
 		}
         public void LogWarning(string message)
         {
-			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Warnig} \t{message}");
+			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Warnig} \t{message}" + "\n");
 		}
         public void LogError(string message)
         {
-			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Error} \t{message}");
+			File.AppendAllText(@"F:\c#\nordic-it-cs-q1\13\log.log", $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Error} \t{message}" + "\n");
 		}
     }
 
