@@ -5,22 +5,25 @@ namespace HW14
     class FileLogWriter : ILogWriter
     {
         private readonly string _filename;
+
         private static FileLogWriter _instance;
+        private FileLogWriter(string filename)
+        {
+            _filename = filename;
+        }
         public static FileLogWriter Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new FileLogWriter("F:\\C#\\logg.log");
+                    _instance = new FileLogWriter("_filename");
+
                 }
                 return _instance;
             }
         }
-        private FileLogWriter(string filename)
-        {
-            _filename = filename;
-        }
+        
 
         public void LogInfo(string message)
         {
