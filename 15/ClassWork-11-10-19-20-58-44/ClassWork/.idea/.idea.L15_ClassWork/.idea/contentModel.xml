@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_L15_ClassWork.-65971042.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="L15_C01_generic_methods" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C01_generic_methods.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C01_generic_methods.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Swapper.cs" t="Include" />
+      </e>
+      <e p="L15_C02_generic_methods_final" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C02_generic_methods_final.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C02_generic_methods_final.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Swapper.cs" t="Include" />
+      </e>
+      <e p="L15_C03_generic_classes" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C03_generic_classes.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C03_generic_classes.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Swapper.cs" t="Include" />
+      </e>
+      <e p="L15_C04_generic_classes_SW" t="IncludeRecursive">
+        <e p="Account.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C04_generic_classes_SW.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C04_generic_classes_SW.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_C05_generic_constraints_demo" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C05_generic_constraints_demo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C05_generic_constraints_demo.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Swapper.cs" t="Include" />
+      </e>
+      <e p="L15_C06_delegate_demo" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C06_delegate_demo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C06_delegate_demo.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Operations.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_C07_delegate_multiple_demo" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C07_delegate_multiple_demo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C07_delegate_multiple_demo.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Operations.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_C08_delegate_fcl_action_func_demo" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C08_delegate_fcl_action_func_demo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C08_delegate_fcl_action_func_demo.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_C09_delegate_fcl_action_func_final" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="L15_C09_delegate_fcl_action_func_final.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C09_delegate_fcl_action_func_final.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_C10_delegate_SW" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Circle.cs" t="Include" />
+        <e p="CircleOperations.cs" t="Include" />
+        <e p="L15_C10_delegate_SW.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="L15_C10_delegate_SW.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="L15_ClassWork.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
