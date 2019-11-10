@@ -4,8 +4,8 @@ namespace HW10
 {
     class People //Люди
     {
-        string name; //ИМЯ
-        byte age; // Возраст
+        public string name; //ИМЯ
+        public byte age; // Возраст
         public string Name
         {
             get { return name; }
