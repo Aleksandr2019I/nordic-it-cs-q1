@@ -20,7 +20,7 @@ namespace HW14
             file.LogWarning("ВОт ЭТО ОШИБКа");
             file.LogError("Err");
             file.LogInfo("ИНфо");
-            var mult = MultipleLogWriter.Instance;
+            var mult = new MultipleLogWriter(cons, file);
             mult.LogInfo("конлсь инфо");
             mult.LogWarning("конлсь варнинг");
             mult.LogError("конлсь ерор");

@@ -4,23 +4,10 @@ namespace HW14
 {
     class MultipleLogWriter : ILogWriter
     {
-        private static MultipleLogWriter _instance;
-
-        public static MultipleLogWriter Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MultipleLogWriter(ConsoleLogWriter.Instance, FileLogWriter.Instance);
-                }
-                return _instance;
-            }
-        }
         private readonly List<ILogWriter> list = new List<ILogWriter>
         {
         };
-        private MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
+        public MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
         {
             list.Add(cLog);
             list.Add(fLog);
