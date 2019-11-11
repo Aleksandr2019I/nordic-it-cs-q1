@@ -2,18 +2,20 @@
 {
     class LogWriterFactory
     {
+        
         public ILogWriter GetLogWriter<T>(object parameters) where T : ILogWriter
         {
-
+            
             if (typeof(T) == typeof(ConsoleLogWriter))
                 return new ConsoleLogWriter();
 
             if (typeof(T) == typeof(FileLogWriter))
-               
-                return new FileLogWriter("F:\\C#\\nordic-it-cs-q1\\15\\logs.log");
+              
+                return new FileLogWriter(parameters.ToString());
 
             if (typeof(T) == typeof(MultipleLogWriter))
-                return new MultipleLogWriter(new ConsoleLogWriter(),new FileLogWriter("F:\\C#\\nordic-it-cs-q1\\15\\logs.log"));
+                return new MultipleLogWriter(new ConsoleLogWriter(), new FileLogWriter(parameters.ToString()));
+
         }
         private static LogWriterFactory _instance;
         public static LogWriterFactory Instance

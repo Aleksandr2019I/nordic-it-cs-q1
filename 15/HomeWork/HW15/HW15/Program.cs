@@ -14,8 +14,8 @@ namespace HW15
         {
             //var first = LogWriterFactory.Instance;
             //first.GetLogWriter(ConsoleLogWriter);
-            //var second = LogWriterFactory.Instance;
-            //second.GetLogWriter(FileLogWriter);
+            var second = LogWriterFactory.Instance;
+
 
 
             Console.ReadKey();

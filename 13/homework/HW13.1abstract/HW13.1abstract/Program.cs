@@ -12,11 +12,12 @@ namespace HW13._1abstract
     {
         static void Main()
         {
-            var filename = ReadFileName();
+            
             var cons = new ConsoleLogWriter();
             cons.LogWarning("ВОт ЭТО ОШИБКа");
             cons.LogError("Err");
             cons.LogInfo("ИНфо");
+            var filename = ReadFileName();
             var file = new FileLogWriter(filename);
             file.LogWarning("ВОт ЭТО ОШИБКа");
             file.LogError("Err");

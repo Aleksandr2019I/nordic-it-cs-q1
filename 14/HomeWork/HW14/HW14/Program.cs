@@ -16,6 +16,7 @@ namespace HW14
             cons.LogWarning("ВОт ЭТО ОШИБКа");
             cons.LogError("Err");
             cons.LogInfo("ИНфо");
+            var filename = ReadFileName();
             var file = FileLogWriter.Instance ;
             file.LogWarning("ВОт ЭТО ОШИБКа");
             file.LogError("Err");
@@ -25,6 +26,20 @@ namespace HW14
             mult.LogWarning("конлсь варнинг");
             mult.LogError("конлсь ерор");
             Console.ReadKey();
+        }
+        static string ReadFileName()
+        {
+            while (true)
+            {
+                Console.WriteLine("введите путь файла");
+                var filename = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(filename))
+                {
+                    Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
+                    continue;
+                }
+                return filename;
+            }
         }
     }
 }

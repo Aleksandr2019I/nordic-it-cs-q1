@@ -18,7 +18,6 @@ namespace HW14
             {
                 i.LogInfo(message);
             }
-
             //list[0].LogInfo(message);
             //list[1].LogInfo(message);
         }
