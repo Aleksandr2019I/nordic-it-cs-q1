@@ -11,10 +11,17 @@ namespace HW15
     class Program
     {
         static void Main()
+
         {
-            //var first = LogWriterFactory.Instance;
-            //first.GetLogWriter(ConsoleLogWriter);
+            var filename = Console.ReadLine();
+            var first = LogWriterFactory.Instance;
+            first.GetLogWriter<ConsoleLogWriter>(new ConsoleLogWriter());
+
             var second = LogWriterFactory.Instance;
+            second.GetLogWriter<FileLogWriter>(new FileLogWriter(filename));
+            
+            var third = LogWriterFactory.Instance;
+            third.GetLogWriter<MultipleLogWriter>(new MultipleLogWriter(first, second));
 
 
 

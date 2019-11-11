@@ -4,7 +4,7 @@ namespace HW14
 {
     class FileLogWriter : ILogWriter
     {
-        private readonly string _filename;
+        private  readonly string _filename;
 
         private static FileLogWriter _instance;
         public static FileLogWriter Instance
@@ -13,7 +13,7 @@ namespace HW14
             {
                 if (_instance == null)
                 {
-                    _instance = new FileLogWriter("filename");
+                    _instance = new FileLogWriter(_filename);
 
                 }
                 return _instance;
