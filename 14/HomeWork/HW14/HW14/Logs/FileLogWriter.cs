@@ -6,6 +6,7 @@ namespace HW14
     {
         private  readonly string _filename;
 
+		public static string Filename { get; set; }
         private static FileLogWriter _instance;
         public static FileLogWriter Instance
         {
@@ -13,12 +14,13 @@ namespace HW14
             {
                 if (_instance == null)
                 {
-                    _instance = new FileLogWriter(_filename);
+                    _instance = new FileLogWriter(Filename);
 
                 }
                 return _instance;
             }
         }
+
         private  FileLogWriter(string filename)
         {
             _filename = filename;

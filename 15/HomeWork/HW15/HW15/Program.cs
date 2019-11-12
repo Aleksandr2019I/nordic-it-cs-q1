@@ -22,7 +22,7 @@ namespace HW15
 			third.LogWarning("и туда и туда");
 
 
-
+			
 
             Console.ReadKey();
         }

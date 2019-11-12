@@ -17,7 +17,7 @@ namespace HW14
             cons.LogError("Err");
             cons.LogInfo("ИНфо");
             var filename = ReadFileName();
-            var file = FileLogWriter.Instance;
+            var file = FileLogWriter.filename;
             file.LogWarning("ВОт ЭТО ОШИБКа");
             file.LogError("Err");
             file.LogInfo("ИНфо");
