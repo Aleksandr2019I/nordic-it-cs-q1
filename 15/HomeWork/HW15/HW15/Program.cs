@@ -14,14 +14,13 @@ namespace HW15
 
         {
             var filename = Console.ReadLine();
-            var first = LogWriterFactory.Instance;
-            first.GetLogWriter<ConsoleLogWriter>(new ConsoleLogWriter());
+			var first = new ConsoleLogWriter();
+			first.LogError("первое сообщение в консоль");
+			var second = new FileLogWriter(filename);
+			second.LogInfo(" запись в файл");
+			var third = new MultipleLogWriter(first, second);
+			third.LogWarning("и туда и туда");
 
-            var second = LogWriterFactory.Instance;
-            second.GetLogWriter<FileLogWriter>(new FileLogWriter(filename));
-            
-            var third = LogWriterFactory.Instance;
-            third.GetLogWriter<MultipleLogWriter>(new MultipleLogWriter(first, second));
 
 
 
