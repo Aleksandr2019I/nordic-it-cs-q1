@@ -4,13 +4,13 @@ namespace HW15
 {
     class MultipleLogWriter : ILogWriter
     {
-        readonly List<ILogWriter> list = new List<ILogWriter>
-        {
-        };
+        readonly List<ILogWriter> list;
+        
+        
         public MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
         {
-            list.Add(cLog);
-            list.Add(fLog);
+            list = new List<ILogWriter>
+           { cLog,fLog };
         }
         public void LogInfo(string message)
         {
