@@ -18,9 +18,6 @@ namespace HW15
             {
                 i.LogInfo(message);
             }
-
-            //list[0].LogInfo(message);
-            //list[1].LogInfo(message);
         }
         public void LogWarning(string message)
         {
@@ -28,8 +25,6 @@ namespace HW15
             {
                 i.LogWarning(message);
             }
-            //    list[0].LogWarning(message);
-            //    list[1].LogWarning(message);
         }
         public void LogError(string message)
         {
@@ -37,8 +32,6 @@ namespace HW15
             {
                 i.LogError(message);
             }
-            //list[0].LogError(message);
-            //list[1].LogError(message);
         }
     }
 }

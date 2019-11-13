@@ -4,13 +4,10 @@ namespace HW14
 {
     class MultipleLogWriter : ILogWriter
     {
-        private readonly List<ILogWriter> list = new List<ILogWriter>
-        {
-        };
+        private readonly List<ILogWriter> list;
         public MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
         {
-            list.Add(cLog);
-            list.Add(fLog);
+            list = new List<ILogWriter> { cLog, fLog };
         }
         public void LogInfo(string message)
         {
@@ -18,8 +15,6 @@ namespace HW14
             {
                 i.LogInfo(message);
             }
-            //list[0].LogInfo(message);
-            //list[1].LogInfo(message);
         }
         public void LogWarning(string message)
         {
@@ -27,8 +22,6 @@ namespace HW14
             {
                 i.LogWarning(message);
             }
-            //    list[0].LogWarning(message);
-            //    list[1].LogWarning(message);
         }
         public void LogError(string message)
         {
@@ -36,8 +29,6 @@ namespace HW14
             {
                 i.LogError(message);
             }
-            //list[0].LogError(message);
-            //list[1].LogError(message);
         }
     }
 }
