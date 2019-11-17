@@ -6,10 +6,13 @@ namespace HW17
     {
         static void Main()
         {
-            var writer = new FileWriterWithProgress();
+            Console.WriteLine("путь");
+            var filename = "f:\\c#\\log.log";
+            var writer = new FileWriterWithProgress(filename);
+
             writer.WritingPerformed += Writer_WritingPerformed;
             writer.WritingCompleted += Writer_WritingCompleted;
-            writer.WriteBytes("F:\\c#\\log.log", new byte[10], 0.1f);
+            writer.WriteBytes(filename, new byte[10], 0.1f);
             Console.ReadKey();
         }
         private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
@@ -22,15 +25,20 @@ namespace HW17
         }
         public class FileWriterWithProgress : EventArgs
         {
+            public string FileName { get; }
+            public FileWriterWithProgress(string fileName)
+            {
+                FileName = fileName;
+            }
             public event EventHandler<FileWriterWithProgress> WritingPerformed;
-            public event EventHandler<FileWriterWithProgress> WritingCompleted;
+            public event EventHandler<FileWriterWithProgress> WritingCompleted;       
             public void WriteBytes(string fileName, byte[] data, float percentageToFileEvent)
             {
                 if (string.IsNullOrWhiteSpace(fileName))
                 {
                     throw new ArgumentException(nameof(fileName));
                 }
-                if (data != null)
+                if (data == null)
                 {
                     throw new ArgumentException(nameof(data));
                 }
@@ -43,8 +51,7 @@ namespace HW17
                     File.AppendAllText(fileName, $"{data[i]}");
                     if (i % percentageToFileEvent == 0)
                     {
-                        WritingPerformed?.Invoke(this, new FileWriterWithProgress());
-
+                        WritingPerformed?.Invoke(this, new FileWriterWithProgress(FileName));
                     }
                     WritingCompleted?.Invoke(this, null);
                 }
