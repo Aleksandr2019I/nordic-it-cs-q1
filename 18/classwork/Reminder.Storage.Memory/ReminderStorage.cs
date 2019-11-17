@@ -35,12 +35,16 @@ namespace Reminder.Storage.Memory
 			}
 			return _map[id];
 		}
+
+        //
         public void Update(ReminderItem item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException(nameof(item));
             }
+
+            _map[item.Id] = item;
         }
         public List<ReminderItem> FindByDateTime(DateTimeOffset dateTime)
         {
@@ -48,7 +52,7 @@ namespace Reminder.Storage.Memory
             {
                 throw new ArithmeticException(nameof(dateTime));
             }
-            return;
+            return new List<ReminderItem>();
         }
 
     }

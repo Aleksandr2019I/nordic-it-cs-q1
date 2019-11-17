@@ -26,6 +26,7 @@ namespace Reminder.Storage.Memory.Tests
         public void WhenCreate_IfNullSpecified_ShouldThrowException()
         {
             var storage = new ReminderStorage();
+
             Assert.Catch<ArgumentNullException>(() =>
             storage.Create(null)
                 );
@@ -43,6 +44,15 @@ namespace Reminder.Storage.Memory.Tests
                 );
             Assert.Catch<ArgumentException>(() =>
             storage.Create(item)
+                );
+        }
+        [Test]
+        public void WhenUpdate_IfNullSpecified_ShouldThrowException()
+        {
+            var storage = new ReminderStorage();
+
+            Assert.Catch<ArgumentNullException>(() =>
+            storage.Update(null)
                 );
         }
 

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace CW17
 {
 	public class RandomDataGenerator
@@ -29,46 +28,36 @@ namespace CW17
 			RandomDataGenerated?.Invoke(this, null);
 			return bytes;
 		}
-
-		
-
 		public class RandomDatageneraorEventArgs : EventArgs
 		{
 			public RandomDatageneraorEventArgs(int dataSize, int bytesDoneToRaiseEvent)
 			{
-				this.DataSize = dataSize;
-				this.BytesDoneToRaiseEvent = bytesDoneToRaiseEvent;
+				DataSize = dataSize;
+				BytesDoneToRaiseEvent = bytesDoneToRaiseEvent;
 			}
-
 			public int DataSize { get; set; }
 			public int BytesDoneToRaiseEvent { get; set; }
-
-
-		}
-		
+		}		
 	}
-	public delegate void RandomDataGeneratedHandler(int dataSize, int bytesDoneToRaiseEvent);
+	//public delegate void RandomDataGeneratedHandler(int dataSize, int bytesDoneToRaiseEvent);
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
 			var generator = new RandomDataGenerator();
-			generator.RandomDataGenerating += OneRandomDatagenereting;
+            generator.RandomDataGenerating += OneRandomDatagenereting;
 			generator.RandomDataGenerated += OneRandomgenereted;
 			var data = generator.GetRandomData(dataSize: 8, bytesDoneToRaiseEvent: 3);
 			Console.ReadKey();
 		}
-			private static void OneRandomgenereted(object sender, EventArgs e)
+        private static void OneRandomgenereted(object sender, EventArgs e)
 			{
 				Console.WriteLine($"data genereted");
 			}
 			private static void OneRandomDatagenereting(int bytesDone, int totalBytes)
 			{
 				Console.WriteLine($"Generate {bytesDone} data of {totalBytes}");
-			}
-
-		
-	}
-	
+			}		
+	}	
 }
 
