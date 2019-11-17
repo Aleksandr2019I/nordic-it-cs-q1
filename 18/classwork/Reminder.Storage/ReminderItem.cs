@@ -3,8 +3,7 @@
 namespace Reminder.Storage
 {
 	public class ReminderItem
-	{		
-		
+	{			
 		public Guid Id { get; }
 		public string ContactId { get; private set; }
 		public ReminderItemStatus Status { get; private set; }
@@ -34,10 +33,6 @@ namespace Reminder.Storage
 			{
 				throw new ArgumentException("Дата сообщения не задана", nameof(messageDate));
 			}
-	
-
-
-
 			Id = id;
 			ContactId = contactId;
 			Message = message;

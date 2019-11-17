@@ -4,7 +4,9 @@ namespace CW17
 {
 	public class RandomDataGenerator
 	{
-		public byte[] GetRandomData(int dataSize, int bytesDoneToRaiseEvent)
+        public event EventHandler<RandomDatageneraorEventArgs> RandomDataGenerating;
+        public event EventHandler RandomDataGenerated;
+        public byte[] GetRandomData(int dataSize, int bytesDoneToRaiseEvent)
 		{
 			if (dataSize <= 0)
 			{
@@ -28,45 +30,41 @@ namespace CW17
 			return bytes;
 		}
 
-		public event EventHandler<RandomDatageneraorEventArgs> RandomDataGenerating;
+		
 
 		public class RandomDatageneraorEventArgs : EventArgs
 		{
 			public RandomDatageneraorEventArgs(int dataSize, int bytesDoneToRaiseEvent)
 			{
-				this.BataSize = dataSize;
+				this.DataSize = dataSize;
 				this.BytesDoneToRaiseEvent = bytesDoneToRaiseEvent;
 			}
 
-			public int BataSize { get; set; }
+			public int DataSize { get; set; }
 			public int BytesDoneToRaiseEvent { get; set; }
 
 
 		}
-		public event EventHandler RandomDataGenerated;
+		
 	}
-
-	public delegate void RandomDataGeneratorHandler(int dataSize, int bytesDoneToRaiseEvent);
-
+	public delegate void RandomDataGeneratedHandler(int dataSize, int bytesDoneToRaiseEvent);
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			var generaot = new RandomDataGenerator();
-			generaot.RandomDataGenerating += OneRandomDatagenereting;
-			generaot.RandomDataGenerated += OneRandomgenereted;
-			var data = generaot.GetRandomData(dataSize: 8, bytesDoneToRaiseEvent: 3);
+			var generator = new RandomDataGenerator();
+			generator.RandomDataGenerating += OneRandomDatagenereting;
+			generator.RandomDataGenerated += OneRandomgenereted;
+			var data = generator.GetRandomData(dataSize: 8, bytesDoneToRaiseEvent: 3);
 			Console.ReadKey();
 		}
-
 			private static void OneRandomgenereted(object sender, EventArgs e)
 			{
 				Console.WriteLine($"data genereted");
 			}
-
-			private static void OneRandomDatagenereting(object sender, RandomDatageneraorEventArgs e)
+			private static void OneRandomDatagenereting(int bytesDone, int totalBytes)
 			{
-				Console.WriteLine($"Generate {bytesdone} data of {}");
+				Console.WriteLine($"Generate {bytesDone} data of {totalBytes}");
 			}
 
 		

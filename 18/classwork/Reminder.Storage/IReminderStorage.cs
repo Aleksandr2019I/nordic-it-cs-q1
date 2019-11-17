@@ -30,8 +30,8 @@ namespace Reminder.Storage
 		/// <summary>
 		///Возвращает все элементы <see cref="ReminderItem"/> не позднее указанной даты
 		/// </summary>
-		/// <param name="dateTime">Дата Элемента</param>
-		/// <returns>Найденный элемент  <see cref="ReminderItem"/></returns>
+		/// <param name="dateTime">Дата </param>
+		/// <returns>Коллекция элементов  <see cref="ReminderItem"/></returns>
 		List<ReminderItem> FindByDateTime(DateTimeOffset dateTime);
 
 
