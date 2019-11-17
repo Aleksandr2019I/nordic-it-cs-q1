@@ -5,7 +5,6 @@ namespace HW14
     class FileLogWriter : ILogWriter
     {
         private  readonly string _filename;
-
 		public static string Filename { get; set; }
         private static FileLogWriter _instance;
         public static FileLogWriter Instance
@@ -20,14 +19,10 @@ namespace HW14
                 return _instance;
             }
         }
-
         private  FileLogWriter(string filename)
         {
             _filename = filename;
-        }
-
-        
-
+        }  
         public void LogInfo(string message)
         {
             File.AppendAllText(_filename, $"{DateTime.Now:yyyy:MM:ddThh:mm:ss}+00:00\t{MessageType.Info} \t{message} " + "\n");
