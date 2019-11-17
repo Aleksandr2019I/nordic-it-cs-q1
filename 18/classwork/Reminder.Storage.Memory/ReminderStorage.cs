@@ -26,10 +26,7 @@ namespace Reminder.Storage.Memory
 			}
 			_map[item.Id] = item;
 		}
-		public List<ReminderItem> FindByDateTime(DateTimeOffset dateTime)
-		{
-			throw new NotImplementedException();
-		}
+
 		public ReminderItem FindById(Guid id)
 		{
 			if (!_map.ContainsKey(id))
@@ -38,9 +35,21 @@ namespace Reminder.Storage.Memory
 			}
 			return _map[id];
 		}
-		public void Update(ReminderItem item)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Update(ReminderItem item)
+        {
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+        }
+        public List<ReminderItem> FindByDateTime(DateTimeOffset dateTime)
+        {
+            if (dateTime == null)
+            {
+                throw new ArithmeticException(nameof(dateTime));
+            }
+            return;
+        }
+
+    }
 }

@@ -8,11 +8,11 @@ namespace HW17
         {
             var writer = new FileWriterWithProgress();
             writer.WritingPerformed += Writer_WritingPerformed;
-            writer.WritingPerformed += Writer_WritingPerformed1;
-            writer.WriteBytes("F:\\c#\\log.log",new byte[10], 0.1f);
+            writer.WritingCompleted += Writer_WritingCompleted;
+            writer.WriteBytes("F:\\c#\\log.log", new byte[10], 0.1f);
             Console.ReadKey();
         }
-        private static void Writer_WritingPerformed1(object sender, FileWriterWithProgress e)
+        private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
         {
             Console.WriteLine($"конец процесса");
         }
@@ -46,7 +46,7 @@ namespace HW17
                         WritingPerformed?.Invoke(this, new FileWriterWithProgress());
 
                     }
-                    WritingCompleted?.Invoke(this,null);
+                    WritingCompleted?.Invoke(this, null);
                 }
             }
             // алгоритм тотже только теперь байты  не записыватся в массив,а читаются из массива и пишутся в файл
