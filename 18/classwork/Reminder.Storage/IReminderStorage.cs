@@ -33,7 +33,5 @@ namespace Reminder.Storage
 		/// <param name="dateTime">Дата </param>
 		/// <returns>Коллекция элементов  <see cref="ReminderItem"/></returns>
 		List<ReminderItem> FindByDateTime(DateTimeOffset dateTime);
-
-
 	}
 }

@@ -50,10 +50,9 @@ namespace Reminder.Storage.Memory
         {
             if (dateTime == null)
             {
-                throw new ArithmeticException(nameof(dateTime));
+                throw new ArgumentNullException(nameof(dateTime));
             }
             return new List<ReminderItem>();
         }
-
     }
 }

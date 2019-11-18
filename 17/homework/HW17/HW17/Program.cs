@@ -12,12 +12,12 @@ namespace HW17
 
             writer.WritingPerformed += Writer_WritingPerformed;
             writer.WritingCompleted += Writer_WritingCompleted;
-            writer.WriteBytes(filename, new byte[10], 0.1f);
+            writer.WriteBytes(filename, new byte[10], 0.15f);
             Console.ReadKey();
         }
         private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
         {
-            Console.WriteLine($"конец процесса");
+            Console.WriteLine($"конец процесса ");
         }
         private static void Writer_WritingPerformed(object sender, FileWriterWithProgress e)
         {
@@ -57,7 +57,6 @@ namespace HW17
                 }
             }
             // алгоритм тотже только теперь байты  не записыватся в массив,а читаются из массива и пишутся в файл
-
         }
     }
 }

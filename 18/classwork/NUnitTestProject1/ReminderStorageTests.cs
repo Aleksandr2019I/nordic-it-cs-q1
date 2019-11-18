@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using System;
-
+using System.Collections.Generic;
 
 namespace Reminder.Storage.Memory.Tests
 {
@@ -28,8 +28,7 @@ namespace Reminder.Storage.Memory.Tests
             var storage = new ReminderStorage();
 
             Assert.Catch<ArgumentNullException>(() =>
-            storage.Create(null)
-                );
+            storage.Create(null));
         }
         [Test]
         public void WhenCreate_IfExistsElementWithKey_ShouldThrowException()
@@ -40,8 +39,7 @@ namespace Reminder.Storage.Memory.Tests
                 "Some text",
                 DateTimeOffset.Now);
             var storage = new ReminderStorage(
-                item
-                );
+                item);
             Assert.Catch<ArgumentException>(() =>
             storage.Create(item)
                 );
@@ -50,11 +48,24 @@ namespace Reminder.Storage.Memory.Tests
         public void WhenUpdate_IfNullSpecified_ShouldThrowException()
         {
             var storage = new ReminderStorage();
-
             Assert.Catch<ArgumentNullException>(() =>
-            storage.Update(null)
-                );
+            storage.Update(null));
+        }
+        [Test]
+        public void WhenFindByDateTime_IfNullSpecified_ShouldThrowException()
+        {
+           var list = DateTimeOffset.Now;
+            Assert.Catch<ArgumentNullException>(() =>
+            list.;
         }
 
+        public List<ReminderItem> FindByDateTime(DateTimeOffset dateTime)
+        {
+            if (dateTime == null)
+            {
+                throw new ArgumentNullException(nameof(dateTime));
+            }
+            return new List<ReminderItem>();
+        }
     }
 }

@@ -5,10 +5,15 @@ namespace HW15
     {
         public ILogWriter GetLogWriter<T>(object parameters) where T : ILogWriter
         {
-            switch ()
-            { 
-                case typeof(ConsoleLogWriter):
-                return new ConsoleLogWriter();
+
+            switch (typeof(T))
+            {
+                case ConsoleLogWriter():
+                    return new ConsoleLogWriter();
+                case FileLogWriter():
+                    return new FileLogWriter((string)parameters);
+                case MultipleLogWriter:
+                    return new MultipleLogWriter(new ConsoleLogWriter(), new FileLogWriter((string)parameters));
                 default:
                     throw new InvalidOperationException("Ошибка операции");
             }

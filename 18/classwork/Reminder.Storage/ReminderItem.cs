@@ -33,6 +33,7 @@ namespace Reminder.Storage
 			{
 				throw new ArgumentException("Дата сообщения не задана", nameof(messageDate));
 			}
+
 			Id = id;
 			ContactId = contactId;
 			Message = message;
