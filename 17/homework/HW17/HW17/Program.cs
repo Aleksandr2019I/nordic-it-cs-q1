@@ -12,7 +12,7 @@ namespace HW17
 
             writer.WritingPerformed += Writer_WritingPerformed;
             writer.WritingCompleted += Writer_WritingCompleted;
-            writer.WriteBytes(filename, new byte[10], 0.15f);
+            writer.WriteBytes(filename, new byte[10], 0.2f);
             Console.ReadKey();
         }
         private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
@@ -49,13 +49,14 @@ namespace HW17
                 for (int i = 0; i < data.Length; i++)
                 {
                     File.AppendAllText(fileName, $"{data[i]}");
-                    if (i % percentageToFileEvent == 0)
+                    if ((i/100.0) % percentageToFileEvent == 0)
                     {
                         WritingPerformed?.Invoke(this, new FileWriterWithProgress(FileName));
                     }
-                    WritingCompleted?.Invoke(this, null);
+                   
                 }
-            }
+				WritingCompleted?.Invoke(this, null);
+			}
             // алгоритм тотже только теперь байты  не записыватся в массив,а читаются из массива и пишутся в файл
         }
     }

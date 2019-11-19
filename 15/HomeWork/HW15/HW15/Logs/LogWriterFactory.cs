@@ -8,7 +8,7 @@ namespace HW15
 
             switch (typeof(T))
             {
-                case ConsoleLogWriter():
+                case typeof(ConsoleLogWriter):
                     return new ConsoleLogWriter();
                 case FileLogWriter():
                     return new FileLogWriter((string)parameters);
