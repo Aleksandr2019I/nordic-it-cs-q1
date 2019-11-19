@@ -5,8 +5,4 @@
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Reminder.Storage\Reminder.Storage.csproj" />
-  </ItemGroup>
-
 </Project>

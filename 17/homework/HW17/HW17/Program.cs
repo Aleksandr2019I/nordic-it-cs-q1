@@ -7,7 +7,7 @@ namespace HW17
         static void Main()
         {
             Console.WriteLine("путь");
-            var filename = "f:\\c#\\log.log";
+            var filename = "log.log";
             var writer = new FileWriterWithProgress(filename);
 
             writer.WritingPerformed += Writer_WritingPerformed;
