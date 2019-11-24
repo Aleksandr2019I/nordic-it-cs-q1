@@ -17,11 +17,11 @@ namespace HW17
         }
         private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
         {
-            Console.WriteLine($"конец процесса ");
+            Console.WriteLine($"//+ {sender} событие WritingCompleted при завершении.");
         }
         private static void Writer_WritingPerformed(object sender, FileWriterWithProgress e)
         {
-            Console.WriteLine($"//будет событий - событий WritingPerformed при достижении  записи ");
+            Console.WriteLine($"//будет {e} - событий WritingPerformed при достижении  записи ");
         }
         public class FileWriterWithProgress : EventArgs
         {
