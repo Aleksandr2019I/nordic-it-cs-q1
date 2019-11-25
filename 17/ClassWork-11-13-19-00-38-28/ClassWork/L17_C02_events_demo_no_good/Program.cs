@@ -24,6 +24,7 @@ namespace L17_C02_events_demo_no_good
 			var finalResult = finalDelegate(1, WorkType.Work);
 
 			Console.WriteLine(finalResult);
+            Console.ReadKey();
 		}
 
 		private static int WorkPerformed1(int hours, WorkType workType)

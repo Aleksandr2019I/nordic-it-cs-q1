@@ -17,6 +17,7 @@ namespace L17_C01_events_demo
 		private static void Main(string[] args)
 		{
 			WorkPerformedEventHandler del1 = WorkPerformed1;
+            Console.ReadKey();
 		}
 
 		private static void WorkPerformed1(
@@ -24,5 +25,6 @@ namespace L17_C01_events_demo
 		{
 			Console.WriteLine($"Work of type {workType}: {hours} hours");
 		}
+        
 	}
 }

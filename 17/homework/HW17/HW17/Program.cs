@@ -8,6 +8,7 @@ namespace HW17
         {
             Console.WriteLine("путь");
             var filename = "log.log";
+
             var writer = new FileWriterWithProgress(filename);
 
             writer.WritingPerformed += Writer_WritingPerformed;
@@ -15,18 +16,21 @@ namespace HW17
             writer.WriteBytes(filename, new byte[10], 0.2f);
             Console.ReadKey();
         }
-        private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
-        {
-            Console.WriteLine($"//+ {sender} событие WritingCompleted при завершении.");
-        }
         private static void Writer_WritingPerformed(object sender, FileWriterWithProgress e)
         {
-            Console.WriteLine($"//будет {e} - событий WritingPerformed при достижении  записи ");
+            Console.WriteLine($"//будет {e.PercentageToFileEvent} - событий WritingPerformed при достижении  записи ");
         }
+        private static void Writer_WritingCompleted(object sender, FileWriterWithProgress e)
+        {
+            Console.WriteLine($"//+ {e} событие WritingCompleted при завершении.");
+        }
+
         public class FileWriterWithProgress : EventArgs
         {
             public string FileName { get; }
-            public FileWriterWithProgress(string fileName)
+            public float PercentageToFileEvent { get; }
+            public byte[] Data { get; }
+            public FileWriterWithProgress(string fileName )
             {
                 FileName = fileName;
             }
@@ -49,15 +53,13 @@ namespace HW17
                 for (int i = 0; i < data.Length; i++)
                 {
                     File.AppendAllText(fileName, $"{data[i]}");
-                    if ((i/100.0) % percentageToFileEvent == 0)
+                    if ((data[i] / 100.0 % percentageToFileEvent) == 0)
                     {
-                        WritingPerformed?.Invoke(this, new FileWriterWithProgress(FileName));
-                    }
-                   
+                        WritingPerformed?.Invoke(this, new FileWriterWithProgress(fileName));
+                    }                   
                 }
 				WritingCompleted?.Invoke(this, null);
 			}
-            // алгоритм тотже только теперь байты  не записыватся в массив,а читаются из массива и пишутся в файл
         }
     }
 }

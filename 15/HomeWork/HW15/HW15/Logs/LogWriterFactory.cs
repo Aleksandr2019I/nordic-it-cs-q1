@@ -10,10 +10,10 @@ namespace HW15
             {
                 case typeof(ConsoleLogWriter):
                     return new ConsoleLogWriter();
-                case FileLogWriter():
-                    return new FileLogWriter((string)parameters);
-                case MultipleLogWriter:
-                    return new MultipleLogWriter(new ConsoleLogWriter(), new FileLogWriter((string)parameters));
+                //case typeof(FileLogWriter):
+                //   return new FileLogWriter((string)parameters);
+                //case typeof(MultipleLogWriter):
+                //    return new MultipleLogWriter(new ConsoleLogWriter(), new FileLogWriter((string)parameters));
                 default:
                     throw new InvalidOperationException("Ошибка операции");
             }
