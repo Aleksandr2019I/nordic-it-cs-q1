@@ -32,7 +32,7 @@ namespace CityApp
 			builder.MapRoute(
 				name: "Default",
 				template: "{controller}/{action}",
-				defaults: null
+				defaults: new { Controller = "City", Action = "List"}
 				);
 		}
 	}

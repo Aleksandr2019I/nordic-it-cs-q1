@@ -14,8 +14,16 @@ namespace CityApp.Controllers
 	}
 	public class CityStorage
 	{
-		public List<City> Cities { get; } =
-			new List<City>
+
+		private static CityStorage _instance;
+		public static CityStorage Instance =>
+			_instance ?? (_instance = new CityStorage());
+
+		private readonly List<City> _cities;
+
+		private CityStorage()
+		{
+			_cities = new List<City>
 			{
 				new City
 				{
@@ -30,20 +38,48 @@ namespace CityApp.Controllers
 				Population = 5_000_000
 				},
 			};
+		}
+
+
+		public City[] GetAll()
+		{
+			return _cities.ToArray();
+		}
+
+
+		public void Create(City city)
+		{
+			_cities.Add(city);
+
+		}
+	
 	}
 
 	//city/List
 
 	public class CityController : Controller
 	{
+
+
+
+
+		[HttpGet("cities")]
 		public IActionResult List()
 		{
-			var storage = new CityStorage();
-			var cities = storage.Cities;
-			var json = Json(cities);
-			
 
-			return json;
+			var cities = CityStorage.Instance.GetAll();
+			//var json = Json(cities);
+			//return json;
+			return Json(cities);
+		}
+
+		[HttpPost("api/city")]
+		public IActionResult Create([FromBody]City city)
+		{
+			CityStorage.Instance.Create(city);
+
+			return Ok();
+			
 		}
 	}
 }
