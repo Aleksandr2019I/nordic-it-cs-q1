@@ -18,12 +18,10 @@ namespace CW21
 		{
 			CreateWebHostBuilder(args).Build().Run();
 		}
-
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
 				.UseStartup<Startup2>();
 	}
-
 	public class Startup2
 	{
 		public void Configure(IApplicationBuilder builder,IHostingEnvironment environment)
@@ -32,12 +30,9 @@ namespace CW21
 			{
 				builder.UseDeveloperExceptionPage();
 			}
-
-
 			builder.Use(PostWorldRequest);
 			builder.Use(GetHelloRequest);
 			builder.Run(GetAllRequest);
-
 		}
 		//post/world
 		private static Task PostWorldRequest(HttpContext context,Func<Task> next)
@@ -49,8 +44,6 @@ namespace CW21
 				return context.Response.WriteAsync("POST Hello World");
 			}
 			return next();
-
-
 		}
 		//get//hello
 		private static Task GetHelloRequest(HttpContext context, Func<Task> next)
@@ -63,12 +56,10 @@ namespace CW21
 			}
 			return next();
 		}
-
 		//* *
 		private static Task GetAllRequest(HttpContext context)
 		{
 			throw new Exception("some");
 		}
-
 	}
 }
