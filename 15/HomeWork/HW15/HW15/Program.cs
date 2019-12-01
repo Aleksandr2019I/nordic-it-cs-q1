@@ -12,12 +12,15 @@ namespace HW15
     {
         static void Main()
         {
+;
+            var first = LogWriterFactory.Instance.GetLogWriter<ConsoleLogWriter>("");
+            first.LogError("первый лог");
+
             var filename = ReadFileName();
-            var first = new ConsoleLogWriter();
-            first.LogError("первое сообщение в консоль");
-            var second = new FileLogWriter(filename);
-            second.LogInfo(" запись в файл");
-            var third = new MultipleLogWriter(first, second);
+            var second = LogWriterFactory.Instance.GetLogWriter<FileLogWriter>(filename);
+            second.LogInfo(" запись в файл 2 лог");
+
+            var third = LogWriterFactory.Instance.GetLogWriter<MultipleLogWriter>(filename);
             third.LogWarning("и туда и туда");
             Console.ReadKey();
         }
@@ -25,8 +28,8 @@ namespace HW15
         {
             while (true)
             {
-                Console.WriteLine("введите путь файла");
-                var filename = Console.ReadLine();
+                Console.WriteLine("введите путь файла");             
+                 var filename = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(filename))
                 {
                     Console.WriteLine("Вы ввели пустую строку :( Попробуйте ещё раз:");
