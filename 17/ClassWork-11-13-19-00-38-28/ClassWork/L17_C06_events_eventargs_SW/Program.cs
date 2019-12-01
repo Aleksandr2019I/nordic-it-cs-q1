@@ -30,6 +30,7 @@ namespace L17_C06_events_eventargs_SW
 			{
 				zip.CreateEntryFromFile(binaryFileName, binaryFileName);
 			}
+            Console.ReadKey();
 		}
 
 		private static void OnRandomDataGenerating(object sender, RandomDataGeneratingEventArgs e)
