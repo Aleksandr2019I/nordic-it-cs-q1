@@ -10,9 +10,7 @@ namespace CityApp
 	public class StartUp
 	{
 		public void ConfigureServices(IServiceCollection services)
-		{
-
-		
+		{		
 			services.AddMvc();
 		}
 
