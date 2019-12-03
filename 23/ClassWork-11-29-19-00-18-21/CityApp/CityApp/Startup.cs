@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CityApp
 {
@@ -18,12 +19,20 @@ namespace CityApp
 		{
 			services
 				.AddMvc(
-				options=>
+				options =>
 				{
 					options.RespectBrowserAcceptHeader = true;
-					}
+				}
 				)
 				.AddXmlSerializerFormatters();
+
+			services
+				.AddSwaggerGen(options =>
+				{
+					options.SwaggerDoc("v1", new Info { Title = "Cities", Version = "2.0" });
+				}
+				);
+
 		}
 
 		// Конфигурация пайплайна обработки запроса
@@ -35,6 +44,12 @@ namespace CityApp
 			{
 				builder.UseDeveloperExceptionPage();
 			}
+			builder.UseSwagger();
+			builder.UseSwaggerUI(options =>
+			{
+				options.SwaggerEndpoint("/swagger/v1/swagger.json", "Cities API V1");
+			}
+			);
 
 			builder.UseMvc(ConfigureRoutes);
 		}

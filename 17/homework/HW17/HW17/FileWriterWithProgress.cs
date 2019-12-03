@@ -37,7 +37,7 @@ namespace HW17
 					for (int i = 0; i < data.Length; i++)
 					{
 						fs.WriteByte(data[i]);
-						if (((data[i] / 100.0 % percentageToFileEvent)) / 10 == 0) //??
+						if ((data[i] / 100.0 % percentageToFileEvent)   == 10) //?? muthdimreminder
 						{
 							WritingPerformed?.Invoke(this, new WritingPerformedEventArgs(data, percentageToFileEvent));
 						}

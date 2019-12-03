@@ -54,6 +54,15 @@ namespace CityApp.Controllers
 				return BadRequest();
 			}
 
+			if (!ModelState.IsValid)
+			{
+				var models = ModelState
+					.Select(pair => new ValidationErrorViewModel(pair.Key, pair.Value))
+					.ToArray();
+				return BadRequest(new { Properties = models});
+
+			}
+
 			var model = new City(
 				city.Name,
 				city.Description,

@@ -1,53 +1,25 @@
-﻿using CityApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace CityApp.ViewModels
 {
 	public class CreateCityViewModel
 	{
-		public string Name { get; set; }
-		public int Population { get; set; }
-		public string Description { get; set; }
-	}
-
-	public class CityViewModel
-	{
-		public string Id { get; set; }
+		[Required(ErrorMessage = "Имя города не указано")]
+		[MaxLength(length:256)]
+	
 		public string Name { get; set; }
 
-		public CityViewModel(City city)
-		{
-			Id = city.Id.ToString("N");
-			Name = city.Name;
-
-		}
-
-		public CityViewModel()
-		{
-		}
-	}
-
-	public class DetailCityViewModel
-	{
-		public string Id { get; set; }
-		public string Name { get; set; }
-		public int Population { get; set; }
+		[Required(ErrorMessage = "описание отсутствует")]
+		[MaxLength(length: 1024)]
+		[NotCompare(nameof(Name))]
 		public string Description { get; set; }
 
-		public DetailCityViewModel(City city)
-		{
-			Id = city.Id.ToString("N");
-			Name = city.Name;
-			Description = city.Description;
-			Population = city.Population;
+		[Required]
+		[Range(0,120_000_000)]
+		public int Population { get; set; }
 
-		}
 
-		public DetailCityViewModel()
-		{
-		}
 	}
 }
