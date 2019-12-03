@@ -39,10 +39,10 @@ namespace HW17
 						fs.WriteByte(data[i]);
 						if ((data[i] / 100.0 % percentageToFileEvent)   == 10) //?? muthdimreminder
 						{
-							WritingPerformed?.Invoke(this, new WritingPerformedEventArgs(data, percentageToFileEvent));
+							WritingPerformed?.Invoke(this, new WritingPerformedEventArgs(percentageToFileEvent));
 						}
 					}
-					WritingCompleted?.Invoke(this, null);
+					WritingCompleted?.Invoke(this, data);
 				}
 			}
 		}
