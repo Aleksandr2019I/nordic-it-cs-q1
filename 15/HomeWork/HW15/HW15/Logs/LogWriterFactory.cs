@@ -16,7 +16,7 @@ namespace HW15
             }
             if (typeof(T) == typeof(MultipleLogWriter))
             {
-                return new MultipleLogWriter(new ConsoleLogWriter(), new FileLogWriter((string)parameters));
+                return new MultipleLogWriter(ILogWriter[](object parameters)); // вернуть массив ilogwriter с параметрами
             }
             throw new InvalidOperationException("Ошибка операции");
         }
