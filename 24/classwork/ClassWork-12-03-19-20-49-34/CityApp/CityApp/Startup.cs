@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using CityApp.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,14 +17,15 @@ namespace CityApp
 		// Сам MVC, в свою очередь, состоит из множества сервисов, которые встраиваются в приложение путем вызова метода расширения AddMvc()
 		public void ConfigureServices(IServiceCollection services)
 		{
-            services
-                .AddMvc(
-                    options =>
-                    {
-                        options.RespectBrowserAcceptHeader = true;
-                    }
-                )
-                .AddXmlSerializerFormatters();
+			services
+				.AddMvc(
+					options =>
+					{
+						options.RespectBrowserAcceptHeader = true;
+					}
+				)
+				.AddXmlSerializerFormatters();
+				services.AddSingleton<CityStorage>();
 		}
 
 		// Конфигурация пайплайна обработки запроса

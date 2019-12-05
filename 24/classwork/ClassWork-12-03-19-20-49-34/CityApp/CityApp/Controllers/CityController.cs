@@ -17,9 +17,7 @@ namespace CityApp.Controllers
 
 		private CityStorage _storage;
 
-
-
-		public CityController(ILogger logger, CityStorage storage)
+		public CityController(ILogger <CityController> logger, CityStorage storage)
 		{
 			_logger = logger;
 			_storage = storage;
