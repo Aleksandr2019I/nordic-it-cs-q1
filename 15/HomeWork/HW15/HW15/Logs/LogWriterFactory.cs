@@ -5,7 +5,6 @@ namespace HW15
     {
         public ILogWriter GetLogWriter<T>(object parameters) where T : ILogWriter
         {
-
             if (typeof(T) == typeof(ConsoleLogWriter))
             {
                 return new ConsoleLogWriter();

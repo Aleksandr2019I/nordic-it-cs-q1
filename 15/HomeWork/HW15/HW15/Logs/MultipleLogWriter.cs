@@ -5,12 +5,11 @@ namespace HW15
     class MultipleLogWriter : ILogWriter
     {
         readonly List<ILogWriter> list;
-        
-        
-        public MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
+
+        public MultipleLogWriter( ILogWriter[] parametrs)
         {
-            list = new List<ILogWriter>
-           { cLog,fLog };
+            list = new List<ILogWriter>(parametrs);
+
         }
         public void LogInfo(string message)
         {
