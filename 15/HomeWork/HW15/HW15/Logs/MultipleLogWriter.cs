@@ -6,11 +6,16 @@ namespace HW15
     {
         readonly List<ILogWriter> list;
 
-        public MultipleLogWriter( ILogWriter[] parametrs)
+        public MultipleLogWriter(ILogWriter[] parametrs)
         {
             list = new List<ILogWriter>(parametrs);
 
         }
+        //public MultipleLogWriter(ConsoleLogWriter cLog, FileLogWriter fLog)
+        //{
+        //    list = new List<ILogWriter>
+        //   { cLog,fLog };
+        //}
         public void LogInfo(string message)
         {
             foreach (var i in list)

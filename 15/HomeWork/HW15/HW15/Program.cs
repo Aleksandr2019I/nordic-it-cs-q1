@@ -21,7 +21,7 @@ namespace HW15
             second.LogInfo(" запись в файл 2 лог");
           
            var third = LogWriterFactory.Instance.GetLogWriter<MultipleLogWriter>(new[]{first,second});
-            third.LogWarning("и туда и туда");
+            third.LogWarning("и туда и туда не верю");
             Console.ReadKey();
         }
         static string ReadFileName()
