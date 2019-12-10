@@ -58,6 +58,18 @@ namespace CityApp.Controllers
 		{
 			_cities.Add(city);
 		}
+
+		public void Put(City city)
+		{
+			_cities.Remove(city.Id);
+			_cities.
+			
+		}
+
+		public void Delete(City city)
+		{
+			_cities.Remove(city);
+		}
 	}
 
 	/// <summary>
@@ -84,5 +96,23 @@ namespace CityApp.Controllers
 			CityStorage.Instance.Create(city);
 			return Ok();
 		}
+
+		[HttpPut("cities")]
+		[HttpPut("api/city/list")]
+		public IActionResult Put([FromBody] City city)
+		{
+			CityStorage.Instance.Put;
+			return Ok();
+
+		}
+		[HttpDelete("cities")]
+		[HttpDelete("api/city/list")]
+		public IActionResult Delete([FromBody]City city )
+		{
+			CityStorage.Instance.Delete;
+			return Ok();
+
+		}
+
 	}
 }

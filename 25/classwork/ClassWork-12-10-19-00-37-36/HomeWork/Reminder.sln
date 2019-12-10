@@ -30,9 +30,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reminder.Sender.Telegram", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reminder.Receiver.Tests", "Reminder.Receiver.Tests\Reminder.Receiver.Tests.csproj", "{4EE30070-1C07-4646-A3B8-E4FDFC0CE220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reminder.WebApi", "Reminder.WebApi\Reminder.WebApi.csproj", "{8FEBA3B2-FE5B-4BF6-9776-A55DDDC78B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reminder.WebApi", "Reminder.WebApi\Reminder.WebApi.csproj", "{8FEBA3B2-FE5B-4BF6-9776-A55DDDC78B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reminder.Storage.WebApi", "Reminder.Storage.WebApi\Reminder.Storage.WebApi.csproj", "{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reminder.Storage.WebApi", "Reminder.Storage.WebApi\Reminder.Storage.WebApi.csproj", "{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{9A9AFDF5-3248-42FB-97BC-14C87484FF5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,10 @@ Global
 		{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9AFDF5-3248-42FB-97BC-14C87484FF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9AFDF5-3248-42FB-97BC-14C87484FF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9AFDF5-3248-42FB-97BC-14C87484FF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9AFDF5-3248-42FB-97BC-14C87484FF5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{4EE30070-1C07-4646-A3B8-E4FDFC0CE220} = {2663967D-440B-417D-B25F-67C029671408}
 		{8FEBA3B2-FE5B-4BF6-9776-A55DDDC78B55} = {BD76C7F2-2077-4726-956A-06187C9E1C4B}
 		{DE388E05-341E-48B1-BAC5-D34AB8CCF0BA} = {BD76C7F2-2077-4726-956A-06187C9E1C4B}
+		{9A9AFDF5-3248-42FB-97BC-14C87484FF5A} = {2663967D-440B-417D-B25F-67C029671408}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C941D66E-6E6B-4C43-B277-BDEAAB65BAE8}

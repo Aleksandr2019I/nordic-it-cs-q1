@@ -19,15 +19,8 @@ namespace Reminder.Storage.WebApi
 
 		public void Add(ReminderItem item)
 		{
-			var json = JsonSerializer.Serialize(item);
-			var request = new HttpRequestMessage(HttpMethod.Post,"/api/reminders/")
-			{ 
-				Content = new StringContent(json, Encoding.UTF8,"application/json")
-			};
-
-			var response = _client.SendAsync(request)
-				.GetAwaiter()
-				.GetResult();
+			
+			var response = Execute($"/api/reminders/{item.Id}", HttpMethod.Put, item.ToContent());;
 
 			if (response.StatusCode == HttpStatusCode.Created)
 			{
@@ -39,6 +32,7 @@ namespace Reminder.Storage.WebApi
 		public List<ReminderItem> FindBy(ReminderItemFilter filter)
 		{
 			
+
 		}
 
 		public ReminderItem FindById(Guid id)
@@ -48,7 +42,42 @@ namespace Reminder.Storage.WebApi
 
 		public void Update(ReminderItem item)
 		{
-			
+			var content = item.ToContent();
+			var response = Execute($"/api/reminders/{item.Id}", HttpMethod.Put, content);
+
+			if (response.StatusCode != HttpStatusCode.Ok)
+			{
+				throw new InvalidOperationException(
+								 $"Operation failed with code :{response.StatusCode}");
+			}
+
 		}
+
+		
+
+		private HttpResponseMessage Execute(
+			string url,
+			HttpMethod method,
+			StreamContent content = default)
+		{
+			var request = new HttpRequestMessage(method,url)
+			{
+				Content = content
+			};
+			var response = _client.SendAsync(request)
+				.GetAwaiter()
+				.GetResult();
+
+			return response;
+		}
+		public static class Converter
+		{
+			public static StringContent ToContent<T>(this T item)
+			{
+				var json = JsonSerializer.Serialize<T>(item);
+				return new StringContent(json, Encoding.UTF8, "application/json");
+			}
+		}
+		 
 	}
 }
