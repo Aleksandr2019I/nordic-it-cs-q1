@@ -58,10 +58,11 @@ namespace CityApp.Controllers
 		{
 			_cities.Add(city);
 		}
+
 		/// <summary>
-		/// ///////////
+        /// Дома
+		/// Метод замены в коллекции
 		/// </summary>
-		/// <param name="city"></param>
 		public void Put(City city)
 		{
 
@@ -70,8 +71,11 @@ namespace CityApp.Controllers
 			_cities.Add(city);
 			
 		}
-
-		public void Delete(City city)
+        /// <summary>
+        /// дома
+        /// Метод удаления в коллекции
+        /// </summary>
+        public void Delete(City city)
 		{
 			_cities.Remove(city);
 		}
@@ -103,24 +107,32 @@ namespace CityApp.Controllers
 			return Ok();
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="city"></param>
-		/// <returns></returns>
+        //дома
 		[HttpPut("cities")]
 		[HttpPut("api/city/list")]
 		public IActionResult Put([FromBody] City city)
 		{
-			CityStorage.Instance.Put(city);
+            if (city == null)
+            {
+          
+                return BadRequest();
+            }
+            
+            CityStorage.Instance.Put(city);
 			return Ok();
 
 		}
+        //дома
 		[HttpDelete("cities")]
 		[HttpDelete("api/city/list")]
 		public IActionResult Delete([FromBody]City city )
 		{
-			CityStorage.Instance.Delete(city);
+            if (city == null)
+            {
+
+                return BadRequest();
+            }
+            CityStorage.Instance.Delete(city);
 			return Ok();
 
 		}
