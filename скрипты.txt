@@ -1,0 +1,146 @@
+
+CREATE TABLE  Employee
+(
+    Id int NOT NULL,
+    [FullName] NVARCHAR(256) NOT NULL,
+    AddressId int NOT NULL,
+    PositionId int NOT NULL
+
+)
+
+CREATE TABLE  Adress
+(
+    Id int NOT NULL,
+    City NVARCHAR(256) NOT NULL
+
+)
+
+CREATE TABLE  Document
+(
+    Id int NOT NULL,
+    DocumentTypeId int NOT NULL,
+    [Title] NVARCHAR(256) NOT NULL,
+    [Pages] int NOT NULL
+)
+
+CREATE TABLE  Position
+(
+    Id int NOT NULL,
+    Title NVARCHAR(256) NOT NULL,
+    City NVARCHAR(256) NOT NULL
+)
+CREATE TABLE  DocumentStatus
+(
+    Id int NOT NULL,
+    RenderId int NOT NULL,
+    ReceiverId int NOT NULL,
+    DocumentId int NOT NULL,
+    [Status] NVARCHAR (256) NOT NULL,
+    [DateTime] Datetime2 NOT NULL,
+
+)
+CREATE TABLE  DocumentType
+(
+    Id int NOT NULL,
+    [Title] NVARCHAR(256) NOT NULL
+
+)
+
+
+SELECT * FROM DocumentType;
+SELECT * FROM DocumentStatus;
+SELECT * FROM Position;
+SELECT * FROM Document;
+SELECT * FROM Adress;
+SELECT * FROM Employee;
+
+
+DROP TABLE Employee;
+DROP TABLE DocumentType;
+DROP TABLE DocumentStatus;
+DROP TABLE Position;
+DROP TABLE Document;
+DROP TABLE Adress;
+
+
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+ALTER TABLE Employee
+    add CONSTRAINT pk_Employee PRIMARY KEY CLUSTERED (Id);
+
+ALTER TABLE DocumentType
+    add CONSTRAINT pk_DocumentType PRIMARY KEY CLUSTERED (Id);
+
+ALTER TABLE DocumentStatus
+    add CONSTRAINT pk_DocumentStatus PRIMARY KEY CLUSTERED (Id);
+ 
+ALTER TABLE Adress
+    add CONSTRAINT pk_Adress PRIMARY KEY CLUSTERED (Id);
+
+ALTER TABLE Position
+    add CONSTRAINT pk_Position PRIMARY KEY CLUSTERED (Id);
+
+ALTER TABLE Document
+    add CONSTRAINT pk_Document PRIMARY KEY CLUSTERED (Id);                   
+GO
+
+
+SELECT * FROM DocumentType;
+SELECT * FROM Document;
+SELECT * FROM DocumentStatus;
+
+
+SELECT * FROM Adress;
+
+
+SELECT * FROM Employee;
+
+SELECT * FROM Position;
+
+
+ALTER TABLE  Employee 
+    DROP CONSTRAINT fk_PositionId_Position 
+
+ALTER TABLE   Employee 
+    add CONSTRAINT fk_PositionId_Position FOREIGN KEY (PositionId)
+    REFERENCES Position (Id)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE
+    
+    
+
+    
+ALTER TABLE   Employee 
+    add CONSTRAINT fk_AdressId_Position FOREIGN KEY (AddressId)
+    REFERENCES [Adress] (Id)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE
+
+
+-----
+
+ALTER TABLE   Document 
+    add CONSTRAINT fk_DocumentTypeId_Position FOREIGN KEY (DocumentTypeId)
+    REFERENCES DocumentType (Id)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE   
+
+ ALTER TABLE   DocumentStatus 
+    add CONSTRAINT fk_RenderId_Position FOREIGN KEY (RenderId)
+    REFERENCES Employee (Id)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE
+
+ ALTER TABLE   DocumentStatus 
+    add CONSTRAINT fk_ReceiverId_Position FOREIGN KEY (ReceiverId)
+    REFERENCES Employee (Id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION    
+
+
+
+ ALTER TABLE   DocumentStatus 
+    add CONSTRAINT fk_DocumentId_Position FOREIGN KEY (DocumentId)
+    REFERENCES Document (Id)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE       
