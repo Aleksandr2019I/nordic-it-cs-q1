@@ -57,19 +57,23 @@ namespace CityApp.Controllers
         /// Дома
         /// Метод замены в коллекции
         /// </summary>
-        public void Put(City city)
+        public void Put(Guid id,City city)
         {
-            _cities.Remove(city);
-            _cities.Add(city);
+            var x = _cities.Find(x => x.Id == id);
+            x.Name = city.Name;
+            x.Population = city.Population;
+
         }
         /// <summary>
         /// дома
         /// Метод удаления в коллекции
         /// </summary>
-        public void Delete(City city)
+        public void Delete(Guid id)
         {
-            _cities.Remove(city);
-        }
+           var fe = _cities.Find(x => x.Id == id);
+            _cities.Remove(fe);
+            
+                }
     }
     /// <summary>
     ///  Контроллер, определяет логику по управлению данными городов
@@ -98,27 +102,31 @@ namespace CityApp.Controllers
 
         //дома
         [HttpPut("cities")]
-        [HttpPut("api/city/Put")]
-        public IActionResult Put([FromBody] City city)
+        [HttpPut("api/city/{id}")]
+        public IActionResult Put([FromBody]Guid id, City city)
         {
+            if (id == default)
+            {
+                return BadRequest();
+            }
             if (city == null)
             {
                 return BadRequest();
             }
 
-            CityStorage.Instance.Put(city);
+            CityStorage.Instance.Put(id,city);
             return Ok();
         }
         //дома
         [HttpDelete("cities")]
-        [HttpDelete("api/city/Delete")]
-        public IActionResult Delete([FromBody]City city)
+        [HttpDelete("api/city/{id}")]
+        public IActionResult Delete([FromQuery]Guid id)
         {
-            if (city == null)
+            if (id == null)
             {
                 return BadRequest();
             }
-            CityStorage.Instance.Delete(city);
+            CityStorage.Instance.Delete(id);
             return Ok();
         }
     }
