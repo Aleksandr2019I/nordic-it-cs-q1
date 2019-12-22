@@ -59,9 +59,9 @@ namespace CityApp.Controllers
         /// </summary>
         public void Put(Guid id,City city)
         {
-            var x = _cities.Find(x => x.Id == id);
-            x.Name = city.Name;
-            x.Population = city.Population;
+            var temp = _cities.Find(x => x.Id == id);
+            temp.Name = city.Name;
+            temp.Population = city.Population;
 
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace CityApp.Controllers
         /// </summary>
         public void Delete(Guid id)
         {
-           var fe = _cities.Find(x => x.Id == id);
-            _cities.Remove(fe);
+           var temp = _cities.Find(x => x.Id == id);
+            _cities.Remove(temp);
             
                 }
     }
